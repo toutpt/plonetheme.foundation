@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="plonetheme.foundation">
+
+ <object name="plonetheme_foundation_custom"
+    meta_type="Filesystem Directory View"
+    directory="plonetheme.foundation:skins/plonetheme_foundation_custom"/>
+
+ <skin-path name="plonetheme.foundation" based-on="Plone Default">
+  <layer name="plonetheme_foundation_custom"
+     insert-after="custom"/>
+ </skin-path>
+
+</object>

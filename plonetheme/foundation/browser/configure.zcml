@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="plonetheme.foundation">
+
+  <include package="z3c.jbot" file="meta.zcml" />
+
+  <browser:jbot
+      layer=".layer.Layer"
+      directory="templates" />
+
+  <browser:page
+      name="foundation_view"
+      for="*"
+      class=".foundation_view.FoundationView"
+      allowed_interface=".foundation_view.IFoundationView"
+      permission="zope.Public"
+    />
+
+  <browser:resource
+    name="foundation-integration.js"
+    file="foundation-integration.js"/>
+
+</configure>

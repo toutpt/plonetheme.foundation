@@ -1,0 +1,11 @@
+<div class="small-2 large-3 columns">
+<a id="portal-logo"
+   class="brand"
+   title="Home"
+   accesskey="1"
+   tal:attributes="href view/navigation_root_url;
+                   title view/navigation_root_title"
+   i18n:domain="plone"
+   i18n:attributes="title">
+    <img alt="logo" tal:attributes="src string:${view/navigation_root_url}/logo.png"/></a>
+</div>
