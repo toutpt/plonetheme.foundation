@@ -3,18 +3,25 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="plonetheme.foundation">
 
+  <browser:viewletManager
+      name="plonetheme.foundation.top"
+      provides=".sections.ISectionTop"
+      permission="zope2.View"
+      class="plone.app.viewletmanager.manager.OrderedViewletManager"
+      />
+
   <browser:viewlet
-      name="plonetheme.foundation.editbar"
-      manager="plone.app.layout.viewlets.interfaces.IContentViews"
-      class=".editbar.EditBar"
+      name="plonetheme.foundation.global_sections"
+      manager=".sections.ISectionTop"
+      class=".sections.GlobalSectionsViewlet"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope2.View"
       />
 
   <browser:viewlet
-      name="plone.global_sections"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".sections.GlobalSectionsViewlet"
+      name="plonetheme.foundation.editbar"
+      manager="plone.app.layout.viewlets.interfaces.IContentViews"
+      class=".editbar.EditBar"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope2.View"
       />

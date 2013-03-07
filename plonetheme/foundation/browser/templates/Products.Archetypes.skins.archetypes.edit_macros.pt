@@ -101,7 +101,7 @@
                       <a tal:attributes="href string:#${fieldsetid}"
                       tal:content="python: view.getTranslatedSchemaLabel(fieldset)">FIELDSET</a>
                     </p>
-                    <div class="content" tal:attributes="data-slug string:${fieldsetid}">
+                    <div class="content" tal:attributes="data-slug string:${fieldsetid}" style="min-height: 600px;">
                       <tal:fields repeat="field python:schematas[fieldset].editableFields(here, visible_only=True)">
                         <metal:fieldMacro use-macro="python:context.widget(field.getName(), mode='edit')" />
                       </tal:fields>

@@ -3,6 +3,12 @@ personal tools. No change to original code"""
 
 from plone.app.layout.viewlets import common
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.viewlet.interfaces import IViewletManager
+
+
+class ISectionTop(IViewletManager):
+    """A viewlet manager that sits in the <head> of the rendered page
+    """
 
 
 class GlobalSectionsViewlet(

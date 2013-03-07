@@ -1,4 +1,4 @@
-<div class="contain-to-grid sticky">
+<div class="contain-to-grid sticky fixed">
 	<nav class="top-bar">
 		<tal:sections tal:define="portal_tabs view/portal_tabs"
 			tal:condition="portal_tabs" i18n:domain="plone">

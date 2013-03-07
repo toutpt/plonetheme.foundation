@@ -57,6 +57,7 @@
 
     <div id="visual-portal-wrapper">
         <header tal:condition="not:ajax_load">
+            <div tal:replace="structure provider:plonetheme.foundation.top" />
             <div id="portal-header-wrapper">
                 <div tal:replace="structure provider:plone.portaltop" />
             </div>
@@ -148,7 +149,6 @@
 
                 <tal:notajax tal:condition="not:ajax_load">
                 <div id="portal-column-two"
-                    class="cell width-1:4 position-3:4"
                     metal:define-slot="column_two_slot"
                     tal:condition="sr"
                     tal:attributes="class classes/two">
@@ -160,7 +160,7 @@
             </div>
         </div>
 
-        <footer tal:condition="not:ajax_load" class="row full-width panel">
+        <footer tal:condition="not:ajax_load" class="row panel">
            <div tal:replace="structure provider:plone.portalfooter" />
         </footer>
     </div>
