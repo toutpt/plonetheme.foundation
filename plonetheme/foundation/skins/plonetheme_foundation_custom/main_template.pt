@@ -160,16 +160,8 @@
             </div>
         </div>
 
-        <footer tal:condition="not:ajax_load">
-            <div id="portal-footer-wrapper"
-                class="container-fluid">
-                <div class="row-fluid">
-                    <div tal:replace="structure provider:plone.portalfooter" />
-                    <div id="kss-spinner">
-                        <img tal:attributes="src string:${portal_url}/spinner.gif" alt="" />
-                    </div>
-                </div>
-            </div>
+        <footer tal:condition="not:ajax_load" class="row full-width panel">
+           <div tal:replace="structure provider:plone.portalfooter" />
         </footer>
     </div>
 </body>

@@ -19,4 +19,12 @@
       permission="zope2.View"
       />
 
+  <browser:viewlet
+      name="plone.footer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".footer.FooterViewlet"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
+
 </configure>

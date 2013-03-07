@@ -13,5 +13,9 @@
     <viewlet name="plone.searchbox" />
     <viewlet name="plone.personal_bar" />
   </hidden>
+  <hidden manager="plone.portalfooter" skinname="plonetheme.foundation">
+    <viewlet name="plone.colophon" />
+    <viewlet name="plone.site_actions" />
+  </hidden>
 
 </object>
