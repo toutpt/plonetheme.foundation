@@ -1,8 +1,17 @@
 <?xml version="1.0"?>
-
 <object>
-<hidden manager="plone.contentviews" skinname="plonetheme.foundation">
-  <viewlet name="plone.contentviews" />
-  <viewlet name="plone.contentactions" />
-</hidden>
+  <order manager="plone.portalheader" skinname="plonetheme.foundation" based-on="Plone Default">
+    <viewlet name="plone.logo" insert-before="*"/>
+    <viewlet name="plone.global_sections" insert-before="plone.logo"/>
+  </order>
+
+  <hidden manager="plone.contentviews" skinname="plonetheme.foundation">
+    <viewlet name="plone.contentviews" />
+    <viewlet name="plone.contentactions" />
+  </hidden>
+  <hidden manager="plone.portalheader" skinname="plonetheme.foundation">
+    <viewlet name="plone.searchbox" />
+    <viewlet name="plone.personal_bar" />
+  </hidden>
+
 </object>

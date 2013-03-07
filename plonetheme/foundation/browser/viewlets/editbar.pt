@@ -4,14 +4,6 @@
          checkPermission nocall: context/portal_membership/checkPermission;"
      tal:condition="ploneview/showEditableBorder">
 <nav class="top-bar" tal:define="view_actions view/prepareObjectTabs; content_actions view/object_actions;">
-  <ul class="title-area">
-    <li class="name">
-      <h1><a tal:attributes="href string:${view/site_url}" i18n:translate="">Home</a></h1>
-    </li>
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-
   <section class="top-bar-section">
     <ul class="left">
       <tal:views repeat="action view_actions">

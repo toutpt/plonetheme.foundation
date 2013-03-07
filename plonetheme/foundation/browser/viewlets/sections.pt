@@ -1,0 +1,108 @@
+<div class="contain-to-grid sticky">
+	<nav class="top-bar">
+		<tal:sections tal:define="portal_tabs view/portal_tabs"
+			tal:condition="portal_tabs" i18n:domain="plone">
+			<section class="top-bar-section">
+				<ul id="portal-globalnav" class="left"
+					tal:define="selected_tab python:view.selected_portal_tab">
+					<tal:tabs tal:repeat="tab portal_tabs">
+						<li class="divider"></li>
+						<li tal:define="tid tab/id"
+							tal:attributes="id string:portaltab-${tid};
+                            class python:selected_tab==tid and 'active' or 'plain'">
+							<a href="" tal:content="tab/name"
+								tal:attributes="href tab/url;
+                               title tab/description|nothing;">
+								Tab Name
+							</a>
+						</li>
+					</tal:tabs>
+				</ul>
+				<ul class="right">
+					<li class="divider"></li>
+					<li class="has-form">
+
+						<div id="portal-searchbox" i18n:domain="plone"
+							tal:define="navigation_root_url view/navigation_root_url;
+                 search_input_id view/search_input_id;">
+
+							<form name="searchform" id="searchGadget_form" action="@@search"
+								tal:attributes="action string:${navigation_root_url}/@@search;
+                          id string:${search_input_id}_form;">
+
+								<div class="LSBox">
+									<div class="row collapse">
+										<div class="small-8 columns">
+											<label class="hiddenStructure" tal:attributes="for search_input_id"
+												i18n:translate="text_search">Search Site</label>
+
+											<input name="SearchableText" type="text" size="18"
+												value="" title="Search Site" placeholder="Search Site"
+												accesskey="4"
+												i18n:attributes="title title_search_site;
+                                placeholder title_search_site"
+												tal:attributes="value request/form/SearchableText|nothing;
+                               id search_input_id"
+												class="searchField" />
+										</div>
+										<div class="small-4 columns">
+											<input class="button" type="submit" value="Search"
+												i18n:attributes="value label_search;" />
+										</div>
+
+
+										<div class="LSResult" id="LSResult" style="">
+											<div class="LSShadow" id="LSShadow"></div>
+										</div>
+									</div>
+							</form>
+						</div>
+
+					</li>
+					<li class="divider"></li>
+					<li class="has-dropdown">
+
+						<!-- PERSONAL BAR -->
+
+							<div tal:omit-tag="" tal:condition="python:view.user_actions and not view.anonymous">
+
+								<tal:block condition="not: view/anonymous">
+									<a id="user-name"
+										tal:attributes="href view/homelink_url" tal:content="view/user_name">
+										John
+									</a>
+									<ul class="dropdown">
+										<li tal:repeat="action view/user_actions" tal:attributes="id string:personaltools-${action/id}">
+											<a href=""
+												tal:attributes="href action/url;
+                             target action/link_target|nothing"
+												tal:content="action/title" i18n:translate="">
+												action title
+											</a>
+										</li>
+									</ul>
+								</tal:block>
+							</div>
+
+							<ul id="portal-personaltools" class="button-group"
+								tal:condition="python:view.user_actions and view.anonymous">
+								<tal:actions repeat="action view/user_actions">
+									<li>
+										<a href="" class="button"
+											tal:attributes="href action/url;
+                           id string:personaltools-${action/id};
+                           target action/link_target|nothing;"
+											tal:content="action/title" i18n:translate="">
+											action title
+										</a>
+									</li>
+								</tal:actions>
+							</ul>
+
+					</li>
+				</ul>
+			</section>
+		</tal:sections>
+	</nav>
+</div>
+

@@ -19,7 +19,9 @@
     />
 
   <browser:resource
-    name="foundation-integration.js"
-    file="foundation-integration.js"/>
-
+    name="plonetheme.foundation.js"
+    file="foundation.js"/>
+  <browser:resource
+    name="plonetheme.foundation.css"
+    file="foundation.css"/>
 </configure>

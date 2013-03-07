@@ -4,10 +4,17 @@
     i18n_domain="plonetheme.foundation">
 
   <browser:viewlet
-      for="*"
       name="plonetheme.foundation.editbar"
       manager="plone.app.layout.viewlets.interfaces.IContentViews"
       class=".editbar.EditBar"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope2.View"
+      />
+
+  <browser:viewlet
+      name="plone.global_sections"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".sections.GlobalSectionsViewlet"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope2.View"
       />

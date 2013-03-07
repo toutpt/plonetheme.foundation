@@ -14,6 +14,11 @@
     media="" rel="stylesheet" rendering="link"
     cacheable="True" compression="none" cookable="True"
     enabled="1" expression=""/>
+ <stylesheet 
+    id="++resource++plonetheme.foundation.css"
+    media="" rel="stylesheet" rendering="link"
+    cacheable="True" compression="none" cookable="True"
+    enabled="1" expression=""/>
 
  <!-- Deactivate unused stylesheet that come in Plone -->
  <stylesheet enabled="0" id="base.css" />

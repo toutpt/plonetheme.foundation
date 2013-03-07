@@ -2,5 +2,6 @@
 <object name="portal_javascripts">
 
  <javascript id="++resource++collective.js.foundation/js/foundation.min.js"/>
+ <javascript id="++resource++plonetheme.foundation.js"/>
 
 </object>
