@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+<body>
+
+<tal:block i18n:domain="plone"
+           metal:define-macro="portal_message">
+
+    <div class="panel radius" id="kssPortalMessage" style="display:none">
+        <tal:block replace="nothing">KSS portal message</tal:block>
+    </div>
+
+    <tal:statusmsg tal:define="messages python:context.plone_utils.showPortalMessages()"
+                   tal:repeat="message messages">
+
+        <div class="panel radius large-6 columns large-offset-6 callout"
+            tal:define="mtype message/type | nothing;"
+            tal:attributes="class string:panel radius large-6 columns large-offset-6 callout ${mtype};">
+            <p tal:omit-tag="" tal:content="message/message | nothing"
+                i18n:translate="">
+                The status message.
+            </p>
+        </div>
+
+    </tal:statusmsg>
+</tal:block>
+
+</body>
+</html>
