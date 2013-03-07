@@ -47,7 +47,7 @@ class FoundationView(BrowserView):
         portlets = "large-3 columns"
         if not sl and not sr:
             # we don't have columns, thus conten takes the whole width
-            columns['content'] = "large-12"
+            columns['content'] = "large-12 columns"
 
         elif sl and sr:
             # In case we have both columns, content takes 50% of the whole

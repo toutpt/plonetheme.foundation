@@ -18,6 +18,13 @@
       permission="zope.Public"
     />
 
+  <browser:page
+      for="*"
+      name="foundation_test_view"
+      template="test_view.pt"
+      permission="zope.Public"
+    />
+
   <browser:resource
     name="plonetheme.foundation.js"
     file="foundation.js"/>

@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="collective.googledocsviewer">
+<body>
+<div metal:fill-slot="content-core">
+
+<div class="row">
+
+<div class="large-9 columns">
+            <div class="section-container tabs" data-section="" data-options="deep_linking: true">
+              <section class="section">
+                <p class="title"><a href="#panel1">Section 1</a></p>
+                <div class="content" data-slug="panel1">
+                  <p>Section 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </section>
+              <section class="section">
+                <p class="title"><a href="#panel2">Section 2</a></p>
+                <div class="content" data-slug="panel2">
+                  <p>Section 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </section>
+              <div class="section">
+                <p class="title"><a href="#panel3">Section 3</a></p>
+                <div class="content" data-slug="panel3">
+                  <form>
+                    <div class="row collapse">
+                      <div class="large-2 columns">
+                        <label class="inline">Your Name</label>
+                      </div>
+                      <div class="large-10 columns">
+                        <input type="text" id="yourName" placeholder="Jane Smith">
+                      </div>
+                    </div>
+                    <div class="row collapse">
+                      <div class="large-2 columns">
+                        <label class="inline"> Your Email</label>
+                      </div>
+                      <div class="large-10 columns">
+                        <input type="text" id="yourEmail" placeholder="jane@smithco.com">
+                      </div>
+                    </div>
+                    <label>What's up?</label>
+                    <textarea rows="4"></textarea>
+                    <button type="submit" class="radius button">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+</div>
+</body>
+</html>

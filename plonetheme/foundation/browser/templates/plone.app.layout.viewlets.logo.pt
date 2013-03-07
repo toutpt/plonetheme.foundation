@@ -8,4 +8,5 @@
    i18n:domain="plone"
    i18n:attributes="title">
     <img alt="logo" tal:attributes="src string:${view/navigation_root_url}/logo.png"/></a>
+
 </div>

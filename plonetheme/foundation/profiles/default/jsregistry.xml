@@ -4,4 +4,20 @@
  <javascript id="++resource++collective.js.foundation/js/foundation.min.js"/>
  <javascript id="++resource++plonetheme.foundation.js"/>
 
+ <!-- DISABLED some javascript form Plone -->
+ <javascript enabled="0" id="form_tabbing.js" />
+ <javascript enabled="0" id="++resource++search.js" />
+ <javascript enabled="0" id="++resource++plone.app.discussion.javascripts/comments.js" />
+ <javascript enabled="0" id="++resource++plone.app.jquerytools.js" />
+ <javascript enabled="0" id="++resource++plone.app.jquerytools.dateinput.js" />
+ <javascript enabled="0" id="++resource++plone.app.jquerytools.overlayhelpers.js" />
+ <javascript enabled="0" id="++resource++plone.app.jquerytools.form.js" />
+ <javascript enabled="0" id="collapsiblesections.js" />
+ <javascript enabled="0" id="form_tabbing.js" />
+ <javascript enabled="0" id="popupforms.js" />
+ <javascript enabled="0" id="collapsibleformfields" />
+ <javascript enabled="0" id="dropdown.js" />
+ <javascript enabled="0" id="sarissa.js" />
+ <javascript enabled="0" id="++resource++kukit.js" />
+
 </object>
