@@ -27,18 +27,18 @@
   </tal:block>
 </div>
 
-<div id="portal-personaltools"
+<ul id="portal-personaltools" class="button-group"
      tal:condition="python:view.user_actions and view.anonymous">
     <tal:actions repeat="action view/user_actions">
-        <a href="" class="button"
+        <li><a href="" class="button"
            tal:attributes="href action/url;
                            id string:personaltools-${action/id};
                            target action/link_target|nothing;"
            tal:content="action/title"
            i18n:translate="">
             action title
-        </a>
+        </a></li>
     </tal:actions>
-</div>
+</ul>
 
 </div>
