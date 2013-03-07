@@ -1,0 +1,7 @@
+<tal:block repeat="portlet options/portlets">
+<div class="portletWrapper"
+    tal:attributes="id string:portletwrapper-${portlet/hash};
+                     data-portlethash portlet/hash"
+     tal:content="structure python:view.safe_render(portlet['renderer'])" />
+</tal:block>
+<tal:comment tal:replace="nothing">Here we just have removed to manage portlet button</tal:comment>
