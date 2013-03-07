@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<object>
+<hidden manager="plone.contentviews" skinname="plonetheme.foundation">
+  <viewlet name="plone.contentviews" />
+  <viewlet name="plone.contentactions" />
+</hidden>
+</object>

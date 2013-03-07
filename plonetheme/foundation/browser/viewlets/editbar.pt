@@ -1,0 +1,72 @@
+<div i18n:domain="plone"
+     tal:omit-tag=""
+     tal:define="ploneview context/@@plone;
+         checkPermission nocall: context/portal_membership/checkPermission;"
+     tal:condition="ploneview/showEditableBorder">
+<nav class="top-bar" tal:define="view_actions view/prepareObjectTabs; content_actions view/object_actions;">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a tal:attributes="href string:${view/site_url}" i18n:translate="">Home</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="left">
+      <tal:views repeat="action view_actions">
+        <li class="divider"></li>
+        <li tal:define="selected action/selected|nothing;"
+            tal:attributes="id string:contentview-${action/id};
+                            class python:selected and 'selected' or 'plain'">
+          <a href=""
+             tal:content="action/title"
+             tal:attributes="href action/url;
+                             target action/link_target|nothing;"
+             i18n:translate="">
+          View name
+          </a>
+        </li>
+      </tal:views>
+      
+      <li class="divider"></li>
+      <li><a class="managePortletsFallback"
+             tal:condition="python: checkPermission('Manage portlets', view.context)"
+             tal:attributes="href string:${view/context/absolute_url}/@@manage-portlets"
+             i18n:domain="plone"
+             i18n:translate="manage_portlets_link">Manage portlets</a>
+      </li>
+      <li class="divider"></li>
+      <li class="has-dropdown" tal:condition="content_actions"><a href="#" i18n:translate="heading_actions">Actions</a>
+         <ul class="dropdown">
+            <li tal:repeat="action content_actions"
+                tal:attributes="id string:contentaction-${action/id};">
+
+                <a class="" href=""
+                   tal:define="icon python:view.icon(action)"
+                   tal:attributes="href action/url;
+                                   target action/link_target|nothing;">
+
+                    <img alt="" src=""
+                         tal:condition="icon"
+                         tal:attributes="src icon; alt action/title;" />
+
+                    <tal:action tal:content="action/title" i18n:translate="">
+                        Action name
+                    </tal:action>
+                </a>
+
+            </li>
+         </ul>
+      </li>
+      <!--  check the overriden templates: plone.app.contentmenu.contentmenu.pt -->
+    </ul>
+    <ul class="right">
+      <li tal:replace="structure provider:plone.contentmenu"></li>
+      <li class="divider"></li>
+    </ul>
+
+  </section>
+</nav>
+
+</div>

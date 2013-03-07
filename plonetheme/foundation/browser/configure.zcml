@@ -4,6 +4,7 @@
     i18n_domain="plonetheme.foundation">
 
   <include package="z3c.jbot" file="meta.zcml" />
+  <include package=".viewlets" />
 
   <browser:jbot
       layer=".layer.Layer"

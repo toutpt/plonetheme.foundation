@@ -71,8 +71,4 @@ class FoundationView(BrowserView):
             columns['one'] = "large-3"
             columns['content'] = "large-9"
 
-        # # append cell to each css-string
-        # for key, value in columns.items():
-        #     columns[key] = "cell " + value
-
         return columns
