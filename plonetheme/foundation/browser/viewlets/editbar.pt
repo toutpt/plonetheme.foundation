@@ -5,6 +5,12 @@
      tal:condition="ploneview/showEditableBorder">
 <nav class="top-bar" tal:define="view_actions view/prepareObjectTabs; content_actions view/object_actions;">
   <section class="top-bar-section">
+    <ul class="title-area">
+        <li class="name">
+          <h1><a href="#" i18n:translate="Actions">Actions</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+    </ul>
     <ul class="left">
       <tal:views repeat="action view_actions">
         <li class="divider"></li>
@@ -51,8 +57,6 @@
             </li>
          </ul>
       </li>
-      <!--  check the overriden templates: plone.app.contentmenu.contentmenu.pt -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
     <ul class="right">
       <li tal:replace="structure provider:plone.contentmenu"></li>
@@ -61,5 +65,4 @@
 
   </section>
 </nav>
-<div class="visualClear"><!-- --></div>
 </div>

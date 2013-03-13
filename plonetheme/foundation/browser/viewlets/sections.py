@@ -22,3 +22,4 @@ class GlobalSectionsViewlet(
         common.GlobalSectionsViewlet.update(self)
         common.SearchBoxViewlet.update(self)
         common.PersonalBarViewlet.update(self)
+        self.portal_title = self.portal_state.portal_title()

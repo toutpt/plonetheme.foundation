@@ -3,6 +3,12 @@
 		<tal:sections tal:define="portal_tabs view/portal_tabs"
 			tal:condition="portal_tabs" i18n:domain="plone">
 			<section class="top-bar-section">
+                <ul class="title-area">
+		            <li class="name">
+		              <h1><a tal:attributes="href string:${view/site_url}" tal:content="view/portal_title">Title</a></h1>
+		            </li>
+                    <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+                </ul>
 				<ul id="portal-globalnav" class="left"
 					tal:define="selected_tab python:view.selected_portal_tab">
 					<tal:tabs tal:repeat="tab portal_tabs">
@@ -17,7 +23,6 @@
 							</a>
 						</li>
 					</tal:tabs>
-					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 				</ul>
 				<ul class="right">
 					<li class="divider"></li>
