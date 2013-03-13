@@ -1,0 +1,19 @@
+<registry>
+  <record name="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings.resourceBundlesForThemes">
+    <value>
+      <element key="plonetheme.foundation">
+        <element>jquery</element>
+        <element>tinymce</element>
+        <element>foundation</element>
+      </element>
+
+      <element key="Sunburst Theme">
+        <element>default</element>
+        <element>jquery</element>
+        <element>tinymce</element>
+        <element>jquerytools</element>
+        <element>others</element>
+      </element>
+    </value>
+  </record>
+</registry>
