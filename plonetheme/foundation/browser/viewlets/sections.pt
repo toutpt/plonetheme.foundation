@@ -7,7 +7,7 @@
 		            <li class="name">
 		              <h1><a tal:attributes="href string:${view/site_url}" tal:content="view/portal_title">Title</a></h1>
 		            </li>
-                    <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+                    <li class="toggle-topbar menu-icon"><a href="#"><label>menu</label></a></li>
                 </ul>
 				<ul id="portal-globalnav" class="left"
 					tal:define="selected_tab python:view.selected_portal_tab">

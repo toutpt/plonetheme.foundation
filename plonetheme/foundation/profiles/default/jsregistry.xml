@@ -15,12 +15,28 @@
  <javascript enabled="0" id="collapsiblesections.js" />
  <javascript enabled="0" id="form_tabbing.js" />
  <javascript enabled="0" id="popupforms.js" />
- <javascript enabled="0" id="collapsibleformfields" />
  <javascript enabled="0" id="dropdown.js" />
- <javascript enabled="0" id="sarissa.js" />
- <javascript enabled="0" id="++resource++kukit.js" />
+<!-- <javascript enabled="0" id="sarissa.js" />-->
+<!-- <javascript enabled="0" id="++resource++kukit.js" />-->
  <javascript enabled="0" id="inline_validation.js" />
  <javascript enabled="0" id="nodeutilities.js" />
-
+ <javascript enabled="0" id="register_function.js" />
+ <javascript enabled="0" id="cookie_functions.js" />
+ <javascript enabled="0" id="livesearch.js" />
+ <javascript enabled="0" id="select_all.js" />
+ <javascript enabled="0" id="dragdropreorder.js" />
+ <javascript enabled="0" id="first_input_focus.js" />
+ <javascript enabled="0" id="accessibility.js" />
+ <javascript enabled="0" id="styleswitcher.js" />
+ <javascript enabled="0" id="toc.js" />
+ <javascript enabled="0" id="collapsibleformfields.js" />
+ <javascript enabled="0" id="kss-bbb.js" />
+ <javascript enabled="0" id="table_sorter.js" />
+ <javascript enabled="0" id="calendar_formfield.js" />
+ <javascript enabled="0" id="formUnload.js" />
+ <javascript enabled="0" id="formsubmithelpers.js" />
+ <javascript enabled="0" id="unlockOnFormUnload.js" />
+ <javascript enabled="0" id="++resource++plone.formwidget.querystring.querywidget.js" />
+ <javascript enabled="0" id="++resource++plone.formwidget.contenttree/contenttree.js" />
 
 </object>

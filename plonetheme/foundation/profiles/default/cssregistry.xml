@@ -21,6 +21,8 @@
     enabled="1" expression=""/>
 
  <!-- Deactivate unused stylesheet that come in Plone -->
+ <stylesheet enabled="0" id="member.css" />
+ <stylesheet enabled="0" id="reset.css" />
  <stylesheet enabled="0" id="base.css" />
  <stylesheet enabled="0" id="authoring.css" />
  <stylesheet enabled="0" id="columns.css" />
@@ -30,5 +32,15 @@
  <stylesheet enabled="0" id="navtree.css" />
  <stylesheet enabled="0" id="invisibles.css" />
  <stylesheet enabled="0" id="mobile.css" />
+ <stylesheet enabled="0" id="public.css" />
+ <stylesheet enabled="0" id="++resource++plone.app.discussion.stylesheets/discussion.css" />
+ <stylesheet enabled="0" id="print.css" />
+ <stylesheet enabled="0" id="bbb-kss.css" />
+ <stylesheet enabled="0" id="RTL.css" />
+ <stylesheet enabled="0" id="++resource++plone.app.jquerytools.dateinput.css" />
+ <stylesheet enabled="0" id="++resource++plone.formwidget.querystring.querywidget.css" />
+ <stylesheet enabled="0" id="++resource++plone.app.collection.css" />
+ <stylesheet enabled="0" id="IEFixes.css" />
+ <stylesheet enabled="0" id="++resource++plone.formwidget.contenttree/contenttree.css" />
 
 </object>

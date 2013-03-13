@@ -62,7 +62,7 @@
       <li tal:replace="structure provider:plone.contentmenu"></li>
       <li class="divider"></li>
     </ul>
-
   </section>
 </nav>
+<div class="visualClear"><!-- --></div>
 </div>
