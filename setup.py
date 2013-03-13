@@ -34,9 +34,12 @@ setup(name='plonetheme.foundation',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.modernizr',
           'plone.app.theming',
           'plone.app.themingplugins',
+          'plone.app.z3cform',
           'collective.js.foundation',
+          'collective.z3cform.html5widgets',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

@@ -24,6 +24,15 @@
       template="test_view.pt"
       permission="zope.Public"
     />
+  <browser:page
+      name="ploneform-macros"
+      for="*"
+      layer=".layer.Layer"
+      class="plone.app.z3cform.templates.Macros"
+      template="templates/ploneform-macros.pt"
+      allowed_interface="zope.interface.common.mapping.IItemMapping"
+      permission="zope.Public"
+      />
 
   <browser:resource
     name="plonetheme.foundation.js"

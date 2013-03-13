@@ -19,5 +19,8 @@
  <javascript enabled="0" id="dropdown.js" />
  <javascript enabled="0" id="sarissa.js" />
  <javascript enabled="0" id="++resource++kukit.js" />
+ <javascript enabled="0" id="inline_validation.js" />
+ <javascript enabled="0" id="nodeutilities.js" />
+
 
 </object>

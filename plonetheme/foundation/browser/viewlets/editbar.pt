@@ -52,6 +52,7 @@
          </ul>
       </li>
       <!--  check the overriden templates: plone.app.contentmenu.contentmenu.pt -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
     <ul class="right">
       <li tal:replace="structure provider:plone.contentmenu"></li>
