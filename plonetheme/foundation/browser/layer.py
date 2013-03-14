@@ -1,5 +1,4 @@
-from plone.app.z3cform.interfaces import IPloneFormLayer
+from collective.z3cform.html5widgets.layer import Layer
 
-
-class Layer(IPloneFormLayer):
+class Layer(Layer):
     """Browser layer"""
