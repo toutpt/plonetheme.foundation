@@ -7,36 +7,6 @@
  <!-- Move all Plone javascripts into others/jquerytools bundles -->
  <javascript id="jquery.tinymce.js" bundle="tinymce"/>
  <javascript id="tiny_mce_gzip.js" bundle="tinymce"/>
- <javascript id="++resource++plone.app.discussion.javascripts/comments.js" bundle="others"/>
- <javascript id="++resource++plone.app.jquerytools.js" bundle="jquerytools"/>
- <javascript id="++resource++plone.app.jquerytools.dateinput.js" bundle="jquerytools"/>
- <javascript id="++resource++plone.app.jquerytools.overlayhelpers.js" bundle="jquerytools" />
- <javascript id="++resource++plone.app.jquerytools.form.js" bundle="jquerytools" />
- <javascript id="collapsiblesections.js" bundle="others"/>
- <javascript id="form_tabbing.js" bundle="others"/>
- <javascript id="popupforms.js" bundle="others"/>
- <javascript id="dropdown.js" bundle="others"/>
-<!-- <javascript id="sarissa.js" bundle="kss"/>-->
-<!-- <javascript id="++resource++kukit.js" bundle="kss"/>-->
- <javascript id="inline_validation.js" bundle="others"/>
- <javascript id="nodeutilities.js" bundle="others"/>
- <javascript id="register_function.js" bundle="others"/>
- <javascript id="cookie_functions.js" bundle="others"/>
- <javascript id="livesearch.js" bundle="others"/>
- <javascript id="select_all.js" bundle="others"/>
- <javascript id="dragdropreorder.js" bundle="others"/>
- <javascript id="first_input_focus.js" bundle="others"/>
- <javascript id="accessibility.js" bundle="others"/>
- <javascript id="styleswitcher.js" bundle="others"/>
- <javascript id="toc.js" bundle="others"/>
- <javascript id="collapsibleformfields.js" bundle="others"/>
- <javascript id="kss-bbb.js" bundle="others"/>
- <javascript id="table_sorter.js" bundle="others"/>
- <javascript id="calendar_formfield.js" bundle="others"/>
- <javascript id="formUnload.js" bundle="others"/>
- <javascript id="formsubmithelpers.js" bundle="others"/>
- <javascript id="unlockOnFormUnload.js" bundle="others"/>
- <javascript id="++resource++plone.formwidget.querystring.querywidget.js" bundle="others"/>
- <javascript id="++resource++plone.formwidget.contenttree/contenttree.js" bundle="others"/>
+ <javascript id="++resource++plone.app.modernizr.custom.js" bundle="polyfill"/>
 
 </object>

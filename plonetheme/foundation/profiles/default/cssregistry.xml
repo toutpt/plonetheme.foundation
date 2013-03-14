@@ -20,27 +20,6 @@
     cacheable="True" compression="none" cookable="True"
     enabled="1" expression="" />
 
- <!-- Move unused stylesheet of Plone into other bundles-->
- <stylesheet id="member.css" bundle="others" />
- <stylesheet id="reset.css" bundle="others" />
- <stylesheet id="base.css" bundle="others" />
- <stylesheet id="authoring.css" bundle="others" />
- <stylesheet id="columns.css" bundle="others" />
- <stylesheet id="controlpanel.css" bundle="others">
- <stylesheet id="deprecated.css" bundle="others" />
- <stylesheet id="forms.css" bundle="others" />
- <stylesheet id="navtree.css" bundle="others" />
- <stylesheet id="invisibles.css" bundle="others" />
- <stylesheet id="mobile.css" bundle="others" />
- <stylesheet id="public.css" bundle="others" />
- <stylesheet id="++resource++plone.app.discussion.stylesheets/discussion.css" bundle="others" />
- <stylesheet id="print.css" bundle="others" />
- <stylesheet id="bbb-kss.css" bundle="others" />
- <stylesheet id="RTL.css" bundle="others" />
- <stylesheet id="++resource++plone.app.jquerytools.dateinput.css" bundle="jquerytools" />
- <stylesheet id="++resource++plone.formwidget.querystring.querywidget.css" bundle="others" />
- <stylesheet id="++resource++plone.app.collection.css" bundle="others" />
- <stylesheet id="IEFixes.css" bundle="others" />
- <stylesheet id="++resource++plone.formwidget.contenttree/contenttree.css" bundle="others" />
-</stylesheet>
+ <stylesheet id="++resource++tinymce.stylesheets/tinymce.css" bundle="tinymce" />
+
 </object>
