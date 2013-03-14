@@ -49,8 +49,7 @@
 
 					</li>
 					<li class="divider"></li>
-					<li class="has-dropdown">
-							<div tal:omit-tag="" tal:condition="python:view.user_actions and not view.anonymous">
+					<li class="has-dropdown" tal:condition="python:view.user_actions and not view.anonymous">
 								<tal:block condition="not: view/anonymous">
 									<a id="user-name"
 										tal:attributes="href view/homelink_url" tal:content="view/user_name">
@@ -67,10 +66,9 @@
 										</li>
 									</ul>
 								</tal:block>
-							</div>
-
-							<ul id="portal-personaltools" class="button-group"
-								tal:condition="python:view.user_actions and view.anonymous">
+                    </li>
+                    <li class="has-form" tal:condition="python:view.user_actions and view.anonymous">
+							<ul id="portal-personaltools" class="button-group">
 								<tal:actions repeat="action view/user_actions">
 									<li>
 										<a href="" class="button"
