@@ -1,6 +1,37 @@
 Introduction
 ============
 
+This addon is a base theme for the CMS Plone. It provides a different design
+and code base for the UI.
+
+Features
+========
+
+* dexterity support only (plone.app.contenttypes)
+* mobile first
+* html 5
+* css 3
+* based on foundation (by zurb)
+* use top navigation bar (ala twitter bootstrap)
 
 
-This product may contain traces of nuts.
+Dexterity
+---------
+
+Dexterity is the next generation content type engine for the CMS Plone. The
+Plone integration is done by plone.app.contenttypes.
+
+Mobile first
+------------
+
+This theme is mobile first.
+
+HTML 5
+------
+
+Forms are all based on z3cform and widgets are all HTML5 base widgets using
+the addon collective.z3cform.html5widgets
+
+If you want to stay compatible with incapable browser you must consider to
+add polyfills to your project. For example collective.js.webshims
+
