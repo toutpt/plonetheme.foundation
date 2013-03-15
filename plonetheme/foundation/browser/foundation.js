@@ -1,1 +1,1 @@
-$(document).foundation();
+//some javascript specific for the theme.

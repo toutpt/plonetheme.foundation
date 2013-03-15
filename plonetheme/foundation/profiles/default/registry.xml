@@ -4,7 +4,6 @@
       <element key="plonetheme.foundation">
         <element>polyfill</element>
         <element>jquery</element>
-        <element>tinymce</element>
         <element>foundation</element>
       </element>
 

@@ -4,7 +4,7 @@
 
     <upgradeStep
         source="*"
-        destination="1009"
+        destination="1011"
         title="Upgrade"
         description=""
         profile="plonetheme.foundation:default"

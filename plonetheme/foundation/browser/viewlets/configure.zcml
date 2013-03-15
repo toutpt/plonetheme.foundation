@@ -33,5 +33,12 @@
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope.Public"
       />
+  <browser:viewlet
+      name="plonetheme.foundation.init"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      template="init_foundation.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
 
 </configure>

@@ -8,5 +8,4 @@
  <javascript id="jquery.tinymce.js" bundle="tinymce"/>
  <javascript id="tiny_mce_gzip.js" bundle="tinymce"/>
  <javascript id="++resource++plone.app.modernizr.custom.js" bundle="polyfill"/>
-
 </object>
