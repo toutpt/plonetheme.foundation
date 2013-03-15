@@ -1,7 +1,6 @@
 <div class="contain-to-grid sticky fixed" i18n:domain="plone">
 	<nav class="top-bar">
-		<tal:sections tal:define="portal_tabs view/portal_tabs"
-			tal:condition="portal_tabs" i18n:domain="plone">
+		<tal:sections tal:define="portal_tabs view/portal_tabs" i18n:domain="plone">
             <ul class="title-area">
                 <li class="name">
                    <h1><a tal:attributes="href string:${view/site_url}" tal:content="view/portal_title">Title</a></h1>
@@ -9,7 +8,7 @@
                 <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
             </ul>
             <section class="top-bar-section">
-				<ul id="portal-globalnav" class="left"
+				<ul id="portal-globalnav" class="left" tal:condition="portal_tabs"
 					tal:define="selected_tab python:view.selected_portal_tab">
 					<tal:tabs tal:repeat="tab portal_tabs">
 						<li class="divider"></li>
