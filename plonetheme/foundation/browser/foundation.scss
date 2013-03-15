@@ -34,3 +34,9 @@
     margin-top: 60px;
     margin-bottom: 40px;
 }
+
+/* https://github.com/zurb/foundation/issues/1912 */
+.top-bar{
+     margin-bottom:0;
+}
+/* /bug fix */
