@@ -29,6 +29,11 @@
   margin-top: 20px;
   margin-bottom: 20px; }
 
+-moz-focusring[contentEditable='true'],
+div[contenteditable] {
+  padding: 10px;
+  outline: 2px dashed #CCC; }
+
 /* https://github.com/zurb/foundation/issues/1912 */
 .top-bar {
   margin-bottom: 0; }
