@@ -35,3 +35,8 @@ the addon collective.z3cform.html5widgets
 If you want to stay compatible with incapable browser you must consider to
 add polyfills to your project. For example collective.js.webshims
 
+TODO
+----
+
+We depends on jqueryui because of autocomplete. It's the time to implements
+an ajax datalist widget in collective.z3cform.html5widgets

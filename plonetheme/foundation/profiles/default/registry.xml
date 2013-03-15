@@ -4,6 +4,7 @@
       <element key="plonetheme.foundation">
         <element>polyfill</element>
         <element>jquery</element>
+        <element>jqueryui</element>
         <element>foundation</element>
       </element>
 
