@@ -39,3 +39,16 @@ div[contenteditable] {
   margin-bottom: 0; }
 
 /* /bug fix */
+/* https://github.com/zurb/foundation/issues/1877 */
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=week],
+input[type=time],
+input[type=month] {
+  display: -webkit-flex; }
+
+input::-webkit-inner-spin-button {
+  display: inline-block; }
+
+/* /bug fix */

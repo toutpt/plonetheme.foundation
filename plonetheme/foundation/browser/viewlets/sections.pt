@@ -73,9 +73,8 @@
 								tal:attributes="action string:${navigation_root_url}/@@search; id string:${search_input_id}_form;">
                                 <div class="row collapse">
                                     <div class="small-8 columns">
-											<input name="SearchableText" type="text" size="18"
-												value="" title="Search Site" placeholder="Search Site"
-												accesskey="4"
+											<input name="SearchableText" type="search"
+												title="Search Site" placeholder="Search Site"
 												i18n:attributes="title title_search_site; placeholder title_search_site"
 												tal:attributes="value request/form/SearchableText|nothing; id search_input_id"
 												class="searchField" />
