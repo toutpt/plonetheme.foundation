@@ -1,0 +1,13 @@
+<ul data-orbit tal:attributes="data-options view/options" tal:condition="view/slides">
+  <li tal:repeat="slide view/slides">
+    <img alt="photo" tal:attributes="src slide/imgurl"/>
+    <div class="orbit-caption">
+       <p>
+           <span tal:replace="slide/title">Title</span>
+           <span tal:replace="slide/description">Description</span>
+           <span tal:replace="slide/imgtitle"></span>
+           <a tal:attributes="href slide/url">D&eacute;couvrir</a>
+       </p>
+    </div>
+  </li>
+</ul>

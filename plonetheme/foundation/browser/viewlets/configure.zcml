@@ -69,5 +69,14 @@
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope.Public"
       />
+  <browser:viewlet
+      name="plonetheme.foundation.orbit"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      for=".orbit.IOrbitContainer"
+      class=".orbit.OrbitViewlet"
+      template="orbit.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
 
 </configure>

@@ -63,12 +63,12 @@ class FoundationView(BrowserView):
 
         elif (sl and not sr) and isRTL:
             # We have left column and we are in RTL language
-            columns['one'] = portlets + " pull-6"
+            columns['one'] = portlets + " pull-9"
             columns['content'] = "large-9 small-12 push-3 columns"
 
         elif (sl and not sr) and not isRTL:
             # We have left column and we are in NOT RTL language
-            columns['one'] = portlets + " pull-6"
+            columns['one'] = portlets + " pull-9"
             columns['content'] = "large-9 small-12 push-3 columns"
 
         return columns

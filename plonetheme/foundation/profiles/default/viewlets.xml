@@ -10,6 +10,7 @@
     <viewlet name="plone.contentactions" />
   </hidden>
   <hidden manager="plone.portalheader" skinname="plonetheme.foundation">
+    <viewlet name="plone.logo" />
     <viewlet name="plone.global_sections" />
     <viewlet name="plone.searchbox" />
     <viewlet name="plone.personal_bar" />
