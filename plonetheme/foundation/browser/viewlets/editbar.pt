@@ -1,0 +1,40 @@
+<tal:editbar
+    tal:define="ploneview context/@@plone;
+        checkPermission nocall: context/portal_membership/checkPermission;
+        view_actions view/prepareObjectTabs;
+        content_actions view/object_actions;"
+    tal:condition="ploneview/showEditableBorder">
+    <li class="divider"></li>
+    <li class="has-dropdown">
+        <a href="#">ACTIONS</a>
+        <ul class="dropdown">
+            <tal:views repeat="action view_actions">
+
+              <li class="divider"></li>
+              <li tal:define="selected action/selected|nothing;"
+                  tal:attributes="id string:contentview-${action/id};
+                                  class python:selected and 'selected' or 'plain'">
+                <a href=""
+                   tal:content="action/title"
+                   tal:attributes="href action/url;
+                                   target action/link_target|nothing;"
+                   i18n:translate="">
+                View name
+                </a>
+              </li>
+
+
+            </tal:views>
+            <li class="divider"></li>
+            <li><a class="managePortletsFallback"
+                tal:condition="python: checkPermission('Manage portlets', view.context)"
+                tal:attributes="href string:${view/context/absolute_url}/@@manage-portlets"
+                i18n:domain="plone"
+                i18n:translate="manage_portlets_link">Manage portlets</a>
+            </li>
+            <li tal:replace="structure provider:plone.contentmenu"></li>
+            <li class="divider"></li>
+
+        </ul>
+    </li>
+</tal:editbar>

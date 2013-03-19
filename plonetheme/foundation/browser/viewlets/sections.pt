@@ -1,131 +1,15 @@
-<div class="contain-to-grid sticky fixed" i18n:domain="plone">
-	<nav class="top-bar">
-		<tal:sections tal:define="portal_tabs view/portal_tabs" i18n:domain="plone">
-            <ul class="title-area">
-                <li class="name">
-                   <h1><a tal:attributes="href string:${view/site_url}" tal:content="view/portal_title">Title</a></h1>
-                </li>
-                <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-            </ul>
-            <section class="top-bar-section">
-				<ul id="portal-globalnav" class="left" tal:condition="portal_tabs"
-					tal:define="selected_tab python:view.selected_portal_tab">
-					<tal:tabs tal:repeat="tab portal_tabs">
-						<li class="divider"></li>
-						<li tal:define="tid tab/id"
-							tal:attributes="id string:portaltab-${tid};
-                            class python:selected_tab==tid and 'active' or 'plain'">
-							<a href="" tal:content="tab/name"
-								tal:attributes="href tab/url;
-                               title tab/description|nothing;">
-								Tab Name
-							</a>
-						</li>
-					</tal:tabs>
-				</ul>
-				<ul class="right">
-				<tal:comment replace="nothing"> *** EDIT BAR *** </tal:comment>
-				    <tal:editbar tal:define="ploneview context/@@plone;
-                            checkPermission nocall: context/portal_membership/checkPermission;
-                            view_actions view/prepareObjectTabs;
-                            content_actions view/object_actions;"
-                        tal:condition="ploneview/showEditableBorder">
-                        <li class="divider"></li>
-                        <li class="has-dropdown">
-                            <a href="#">ACTIONS</a>
-                            <ul class="dropdown">
-                                <tal:views repeat="action view_actions">
-
-
-        <li class="divider"></li>
-        <li tal:define="selected action/selected|nothing;"
-            tal:attributes="id string:contentview-${action/id};
-                            class python:selected and 'selected' or 'plain'">
-          <a href=""
-             tal:content="action/title"
-             tal:attributes="href action/url;
-                             target action/link_target|nothing;"
-             i18n:translate="">
-          View name
-          </a>
-        </li>
-
-
-                                </tal:views>
-      <li class="divider"></li>
-      <li><a class="managePortletsFallback"
-             tal:condition="python: checkPermission('Manage portlets', view.context)"
-             tal:attributes="href string:${view/context/absolute_url}/@@manage-portlets"
-             i18n:domain="plone"
-             i18n:translate="manage_portlets_link">Manage portlets</a>
-      </li>
-      <li tal:replace="structure provider:plone.contentmenu"></li>
-      <li class="divider"></li>
-
-                            </ul>
-                        </li>
-                    </tal:editbar>
-                <tal:comment replace="nothing"> *** END EDIT BAR *** </tal:comment>
-					<li class="divider"></li>
-					<li class="has-form" id="portal-searchbox" i18n:domain="plone"
-                        tal:define="navigation_root_url view/navigation_root_url; search_input_id view/search_input_id;">
-							<form name="searchform" id="searchGadget_form" action="@@search"
-								tal:attributes="action string:${navigation_root_url}/@@search; id string:${search_input_id}_form;">
-                                <div class="row collapse">
-                                    <div class="small-8 columns">
-											<input name="SearchableText" type="search"
-												title="Search Site" placeholder="Search Site"
-												i18n:attributes="title title_search_site; placeholder title_search_site"
-												tal:attributes="value request/form/SearchableText|nothing; id search_input_id"
-												class="searchField" />
-						            </div>
-						            <div class="small-4 columns">
-											<input class="button" type="submit" value="Search"
-												i18n:attributes="value label_search;" />
-								    </div>
-								</div>
-
-							</form>
-
-					</li>
-					<li class="divider"></li>
-					<li class="has-dropdown" tal:condition="python:view.user_actions and not view.anonymous">
-								<tal:block condition="not: view/anonymous">
-									<a id="user-name"
-										tal:attributes="href view/homelink_url" tal:content="view/user_name">
-										John
-									</a>
-									<ul class="dropdown">
-										<li tal:repeat="action view/user_actions" tal:attributes="id string:personaltools-${action/id}">
-											<a href=""
-												tal:attributes="href action/url;
-                             target action/link_target|nothing"
-												tal:content="action/title" i18n:translate="">
-												action title
-											</a>
-										</li>
-									</ul>
-								</tal:block>
-                    </li>
-                    <li class="has-form" tal:condition="python:view.user_actions and view.anonymous">
-							<ul id="portal-personaltools" class="button-group">
-								<tal:actions repeat="action view/user_actions">
-									<li>
-										<a href="" class="button"
-											tal:attributes="href action/url;
-                           id string:personaltools-${action/id};
-                           target action/link_target|nothing;"
-											tal:content="action/title" i18n:translate="">
-											action title
-										</a>
-									</li>
-								</tal:actions>
-							</ul>
-
-					</li>
-				</ul>
-			</section>
-		</tal:sections>
-	</nav>
-</div>
-
+<tal:sections tal:define="portal_tabs view/portal_tabs;
+	selected_tab python:view.selected_portal_tab">
+	<tal:tabs tal:repeat="tab portal_tabs">
+		<li class="divider"></li>
+		<li tal:define="tid tab/id"
+			tal:attributes="id string:portaltab-${tid};
+                        class python:selected_tab==tid and 'active' or 'plain'">
+			<a href="" tal:content="tab/name"
+				tal:attributes="href tab/url;
+                           title tab/description|nothing;">
+				Tab Name
+			</a>
+		</li>
+	</tal:tabs>
+</tal:sections>

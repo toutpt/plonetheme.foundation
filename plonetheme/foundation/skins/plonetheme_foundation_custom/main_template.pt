@@ -57,7 +57,7 @@
 
     <div id="visual-portal-wrapper">
         <header tal:condition="not:ajax_load">
-            <div tal:replace="structure provider:plonetheme.foundation.top" />
+            <div tal:replace="structure provider:plonetheme.foundation.topbar" />
             <div id="portal-header-wrapper">
                 <div tal:replace="structure provider:plone.portaltop" />
             </div>

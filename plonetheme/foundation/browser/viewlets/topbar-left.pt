@@ -1,0 +1,5 @@
+<ul id="topbar-left" class="left">
+  <tal:block tal:repeat="viewlet view/viewlets">
+    <tal:viewlet tal:content="structure viewlet/render"></tal:viewlet>
+  </tal:block>
+</ul>

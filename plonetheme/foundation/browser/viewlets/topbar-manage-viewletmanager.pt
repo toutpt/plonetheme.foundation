@@ -1,0 +1,29 @@
+<ul id="topbar-left" class="left">
+  <li class="divider"></li>
+  <li class="has-dropdown managedViewlets" tal:attributes="id view/normalized_name"
+     i18n:domain="plone">
+        <a href="#">
+            <span tal:content="view/name">ViewletManager name</span>
+        </a>
+        <ul class="dropdown">
+            <li tal:repeat="viewlet options/viewlets" class="has-dropdown">
+                <a href="#">Viewlet: <span tal:replace="viewlet/name">Viewlet name</span>
+                    (<span tal:replace="viewlet/index">Index</span>)</a>
+                <ul class="dropdown">
+                    <li><a class="up"
+                       tal:condition="viewlet/up_url | nothing"
+                       tal:attributes="href viewlet/up_url">&#9650;</a></li>
+                    <li><a class="down"
+                       tal:condition="viewlet/down_url | nothing"
+                       tal:attributes="href viewlet/down_url">&#9660;</a></li>
+                    <li><a class="hide"
+                       i18n:translate="label_hide_item"
+                       tal:attributes="href viewlet/hide_url">Hide</a></li>
+                    <li><a class="show"
+                       i18n:translate="label_show_item"
+                       tal:attributes="href viewlet/show_url">Show</a></li>
+                </ul>
+            </li>
+        </ul>
+  </li>
+</ul>

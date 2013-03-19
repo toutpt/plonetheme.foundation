@@ -1,0 +1,14 @@
+<div class="contain-to-grid sticky fixed" i18n:domain="plone">
+    <nav class="top-bar">
+      <ul class="title-area">
+          <li class="name">
+             <h1><a tal:attributes="href view/site_url" tal:content="view/portal_title">Title</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+		<div tal:replace="structure provider:plonetheme.foundation.topbarleft" />
+		<div tal:replace="structure provider:plonetheme.foundation.topbarright" />
+        </section>
+    </nav>
+</div>
