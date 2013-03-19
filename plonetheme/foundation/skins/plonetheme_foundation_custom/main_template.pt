@@ -64,17 +64,6 @@
         </header>
         <div id="portal-columns">
             <div class="row">
-                <tal:notajax tal:condition="not:ajax_load">
-                <div id="portal-column-one"
-                    class="cell width-1:4 position-0"
-                    metal:define-slot="column_one_slot"
-                    tal:condition="sl"
-                    tal:attributes="class classes/one">
-                    <metal:portlets define-slot="portlets_one_slot">
-                        <tal:block replace="structure provider:plone.leftcolumn" />
-                    </metal:portlets>
-                </div>
-                </tal:notajax>
 
                 <div id="portal-column-content" class="cell"
                      tal:attributes="class classes/content">
@@ -148,6 +137,16 @@
                 </div>
 
                 <tal:notajax tal:condition="not:ajax_load">
+                <div id="portal-column-one"
+                    class="cell width-1:4 position-0"
+                    metal:define-slot="column_one_slot"
+                    tal:condition="sl"
+                    tal:attributes="class classes/one">
+                    <metal:portlets define-slot="portlets_one_slot">
+                        <tal:block replace="structure provider:plone.leftcolumn" />
+                    </metal:portlets>
+                </div>
+
                 <div id="portal-column-two"
                     metal:define-slot="column_two_slot"
                     tal:condition="sr"
