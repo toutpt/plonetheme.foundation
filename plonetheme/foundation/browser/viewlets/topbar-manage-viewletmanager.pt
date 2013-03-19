@@ -16,10 +16,10 @@
                     <li><a class="down"
                        tal:condition="viewlet/down_url | nothing"
                        tal:attributes="href viewlet/down_url">&#9660;</a></li>
-                    <li><a class="hide"
+                    <li><a class="hide" tal:condition="python:not viewlet['hidden']"
                        i18n:translate="label_hide_item"
                        tal:attributes="href viewlet/hide_url">Hide</a></li>
-                    <li><a class="show"
+                    <li><a class="show"  tal:condition="python:viewlet['hidden']"
                        i18n:translate="label_show_item"
                        tal:attributes="href viewlet/show_url">Show</a></li>
                 </ul>
