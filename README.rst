@@ -7,13 +7,13 @@ and code base for the UI.
 Features
 ========
 
-* dexterity support only (plone.app.contenttypes)
 * mobile first
+* dexterity support only (plone.app.contenttypes)
 * html 5
 * css 3
 * based on foundation (by zurb)
-* use top navigation bar (ala twitter bootstrap)
-
+* use stiky top navigation bar (ala twitter bootstrap)
+* ckeditor 4 wysiwyg
 
 Dexterity
 ---------

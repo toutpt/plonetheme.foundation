@@ -19,4 +19,5 @@
       </element>
     </value>
   </record>
+  <records interface="plonetheme.foundation.browser.viewlets.orbit.OrbitOptionSchema" />
 </registry>

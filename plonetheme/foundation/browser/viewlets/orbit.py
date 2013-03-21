@@ -5,6 +5,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from collective.picturefill.interfaces import IPictureFill
+from collective.configviews.browser.viewlet import ConfigViewlet
 
 
 class IOrbitContainer(interface.Interface):
@@ -21,9 +22,10 @@ class OrbitOptionSchema(interface.Interface):
     stack_on_small = schema.Bool(title=u"", default=True)
 
 
-class OrbitViewlet(ViewletBase):
+class OrbitViewlet(ConfigViewlet):
     """Make orbit usable as a slideshow
     """
+    settings_schema = OrbitOptionSchema
 
     def update(self):
         super(OrbitViewlet, self).update()
@@ -33,7 +35,10 @@ class OrbitViewlet(ViewletBase):
         self.items = self.get_items_info()
 
     def options(self):
-        return 'timer_speed:2500; bullets:false;'  # TODO: use configviews here
+        options = ""
+        for key in self.settings:
+            options += "%s:%s; " % (key, self.settings[key])
+        return options
 
     def get_items_brains(self):
         context = aq_inner(self.context)

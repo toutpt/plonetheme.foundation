@@ -1,3 +1,4 @@
+<script type="text/javascript" tal:content="view/settings_javascripts"></script>
 <ul data-orbit tal:attributes="data-options view/options" tal:condition="view/slides">
   <li tal:repeat="slide view/slides">
     <img tal:replace="structure slide/picturefill"/>
