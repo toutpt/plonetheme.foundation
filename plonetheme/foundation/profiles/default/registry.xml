@@ -7,6 +7,9 @@
         <element>jqueryui</element>
         <element>foundation</element>
       </element>
+      <element key="plonetheme.foundationdesk">
+        <element>ckeditor</element>
+      </element>
 
       <element key="Sunburst Theme">
         <element>default</element>

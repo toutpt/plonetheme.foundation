@@ -8,6 +8,7 @@
  <javascript id="jquery.tinymce.js" bundle="tinymce"/>
  <javascript id="tiny_mce_gzip.js" bundle="tinymce"/>
  <javascript id="++resource++plone.app.modernizr.custom.js" bundle="polyfill"/>
+ <javascript id="++resource++collective.js.enquire.min.js" bundle="foundation"/>
 
  <javascript id="++resource++plone.formwidget.querystring.querywidget.js" bundle="jqueryui"/>
  <javascript id="++resource++plone.formwidget.autocomplete.js" bundle="jqueryui"/>

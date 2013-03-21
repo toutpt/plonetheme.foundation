@@ -3,6 +3,17 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="plonetheme.foundation">
 
+  <interface
+    interface=".layer.Layer"
+    type="zope.publisher.interfaces.browser.IBrowserSkinType"
+    name="plonetheme.foundation"
+    />
+  <interface
+    interface=".layer.DesktopLayer"
+    type="zope.publisher.interfaces.browser.IBrowserSkinType"
+    name="plonetheme.foundationdesk"
+    />
+
   <include package="z3c.jbot" file="meta.zcml" />
   <include package=".viewlets" />
 

@@ -1,0 +1,26 @@
+<script type="text/javascript" charset="utf-8" tal:content="string:
+$(document).ready(function() {
+    enquire.register('screen and (min-width: 500px)', {
+        setup : function() {
+            console.log('SETUP');
+            $.ajax({
+              url: '${view/context/absolute_url}/@@foundation_desktop_resources'
+            }).done(function ( data ) {
+                for (index in data.js){
+                    console.log('add JS: ' + data.js[index]);
+                    var script = document.createElement( 'script' );
+                    script.type = 'text/javascript'; script.src = data.js[index];
+                    document.head.appendChild(script);
+                }
+                for (index in data.css){
+                    console.log('add css: ' + data.css[index]);
+                    var link = document.createElement( 'link' );
+                    link.type = 'text/css'; link.href = data.js[index]; link.media = 'screen';
+                    document.head.appendChild(link);
+                }
+            });
+        },
+        match : function(){},
+        deferSetup : true
+    }).listen();
+});"></script>

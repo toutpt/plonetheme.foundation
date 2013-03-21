@@ -3,6 +3,8 @@ from zope import interface
 from zope import schema
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
+from plone.app.layout.navigation.interfaces import INavigationRoot
+from collective.picturefill.interfaces import IPictureFill
 
 
 class IOrbitContainer(interface.Interface):
@@ -27,21 +29,27 @@ class OrbitViewlet(ViewletBase):
         super(OrbitViewlet, self).update()
         self.slides = []
         self.portal_catalog = getToolByName(self.context, 'portal_catalog')
-        parent = aq_parent(aq_inner(self.context))
-        parent_path = '/'.join(parent.getPhysicalPath())
-        query = {'portal_type': 'Image', 'Subject': 'Slideshow',
-                 'path': parent_path,
-                 'sort_on': 'effective', 'sort_order': 'reverse'}
-        brains = self.portal_catalog(**query)
-
-        for brain in brains:
-            ob = brain.getObject()
-            parent = ob.aq_parent
-            self.slides.append({'title': parent.Title(),
-                          'description': parent.Description(),
-                          'imgtitle': ob.Title(),
-                          'imgurl': ob.absolute_url(),
-                          'url': parent.absolute_url()})
+        self.brains = self.get_items_brains()
+        self.items = self.get_items_info()
 
     def options(self):
-        return ''  # TODO: use configviews here
+        return 'timer_speed:2500; bullets:false;'  # TODO: use configviews here
+
+    def get_items_brains(self):
+        context = aq_inner(self.context)
+        if not INavigationRoot.providedBy(context):
+            context = aq_parent(context)
+        path = '/'.join(context.getPhysicalPath())
+        query = {'portal_type': 'Image', 'Subject': 'Slideshow',
+                 'path': path,
+                 'sort_on': 'effective', 'sort_order': 'reverse'}
+        brains = self.portal_catalog(**query)
+        return brains
+
+    def get_items_info(self):
+        for brain in self.brains:
+            self.slides.append({
+                'title': brain.Title,
+                'description': brain.Description,
+                'picturefill': IPictureFill(brain)
+            })

@@ -78,5 +78,19 @@
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope.Public"
       />
+  <browser:viewlet
+      name="plonetheme.foundation.resources"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+      template="resources.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
+  <browser:page
+      for="*"
+      name="foundation_desktop_resources"
+      class=".resources.Resources"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
 
 </configure>

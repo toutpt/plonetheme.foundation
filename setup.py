@@ -38,6 +38,8 @@ setup(name='plonetheme.foundation',
           'plone.app.theming',
           'plone.app.themingplugins',
           'plone.app.z3cform',
+          'collective.js.ckeditor',
+          'collective.js.enquire',
           'collective.js.foundation',
           'collective.z3cform.html5widgets',
           # -*- Extra requirements: -*-
