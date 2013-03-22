@@ -1,4 +1,4 @@
-<ul id="topbar-right" class="left">
+<ul id="topbar-right" class="right">
   <tal:block tal:repeat="viewlet view/viewlets">
     <tal:viewlet tal:content="structure viewlet/render"></tal:viewlet>
   </tal:block>
