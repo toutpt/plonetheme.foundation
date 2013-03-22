@@ -18,14 +18,6 @@ class IFoundationView(interface.Interface):
 class FoundationView(BrowserView):
     interface.implements(IFoundationView)
 
-    def getViewportValues(self, view=None):
-        """ Determine the value of the viewport meta-tag """
-        return {'width': 'device-width',
-                'initialscale': '0.6666',
-                'maximumscale': '1.0',
-                'minimumscale': '0.6666',
-                }
-
     def getColumnsClasses(self, view=None):
         """ Determine whether a column should be shown. The left column is
             called plone.leftcolumn; the right column is called

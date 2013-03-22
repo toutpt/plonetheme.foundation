@@ -92,5 +92,12 @@
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope.Public"
       />
+  <browser:viewlet
+      name="plonetheme.foundation.viewport"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+      template="viewport.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
 
 </configure>
