@@ -58,6 +58,7 @@
                 <div tal:replace="structure provider:plone.portaltop" />
             </div>
         </header>
+        <metal:block define-slot="portal-columns">
         <div id="portal-columns">
             <div class="row">
 
@@ -154,6 +155,7 @@
                 </tal:notajax>
             </div>
         </div>
+        </metal:block>
 
         <footer tal:condition="not:ajax_load" class="row panel">
            <div tal:replace="structure provider:plone.portalfooter" />
