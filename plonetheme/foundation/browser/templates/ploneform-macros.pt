@@ -75,7 +75,7 @@
                           tal:attributes="value current_fieldset"
                           />
 
-<div class="section-container tabs" data-section data-options="deep_linking: true">
+<div class="section-container auto" data-section data-options="deep_linking: true">
 
                       <!-- Default fieldset -->
                       <metal:define

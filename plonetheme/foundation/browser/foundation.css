@@ -25,6 +25,11 @@
   clear: both; }
 
 /* end */
+label {
+  font-weight: bold;
+  padding-left: 10px;
+  display: inline; }
+
 #portal-header {
   margin-top: 20px;
   margin-bottom: 20px; }

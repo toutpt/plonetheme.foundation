@@ -4,11 +4,11 @@
       <element key="plonetheme.foundation">
         <element>polyfill</element>
         <element>jquery</element>
-        <element>jqueryui</element>
         <element>foundation</element>
       </element>
       <element key="plonetheme.foundationdesk">
         <element>ckeditor</element>
+        <element>jqueryui</element>
       </element>
 
       <element key="Sunburst Theme">

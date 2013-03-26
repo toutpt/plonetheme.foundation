@@ -32,11 +32,11 @@
       />
   <browser:viewlet
       name="plonetheme.foundation.editbar"
-      manager=".topbar.ITopBarRightManager"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
       class=".topbar.EditBarViewlet"
       template="editbar.pt"
       layer="plonetheme.foundation.browser.layer.Layer"
-      permission="zope2.View"
+      permission="cmf.ModifyPortalContent"
       />
   <browser:viewlet
       name="plonetheme.foundation.searchbox"
