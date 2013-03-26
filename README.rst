@@ -24,7 +24,10 @@ Plone integration is done by plone.app.contenttypes.
 Mobile first
 ------------
 
-This theme is mobile first.
+This theme is mobile first, it means all features are working on a mobile device
+and are enhanced for desktop.
+
+* http://en.wikipedia.org/wiki/Progressive_enhancement
 
 HTML 5
 ------
@@ -34,6 +37,11 @@ the addon collective.z3cform.html5widgets
 
 If you want to stay compatible with incapable browser you must consider to
 add polyfills to your project. For example collective.js.webshims
+
+Read about compatibilities:
+
+* http://mobilehtml5.org/
+* http://www.wufoo.com/html5/
 
 TODO
 ----
