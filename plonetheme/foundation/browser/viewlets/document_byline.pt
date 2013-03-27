@@ -1,0 +1,58 @@
+<div class="documentByLine"
+     id="plone-document-byline"
+     i18n:domain="plone"
+     tal:condition="view/show">
+
+  <tal:creator tal:define="creator_short_form view/creator;"
+               tal:condition="creator_short_form">
+  <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
+                        creator_is_openid python:'/' in creator_short_form;
+                        creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
+
+<ul class="breadcrumbs">
+  <li><tal:i18n i18n:translate="label_by_author">by
+      <a href="#" rel="author"
+         tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${creator_id}"
+         tal:content="view/authorname"
+         tal:omit-tag="python:view.author() is None"
+         i18n:name="author">Roland Barthes</a></tal:i18n>
+  </li>
+  <li tal:define="published view/pub_date" tal:condition="published">
+    <span i18n:translate="box_published">published</span>
+    <span tal:replace="python:view.toLocalizedTime(published,long_format=1)">
+      August 16, 2001 at 23:35:59
+    </span>
+  </li>
+  <li tal:define="modified context/ModificationDate" tal:condition="modified">
+    <span i18n:translate="box_last_modified">
+      last modified
+    </span>
+    <a tal:condition="view/show_history"
+       tal:attributes="href string:${here/absolute_url}/@@historyview"
+       tal:content="python:view.toLocalizedTime(modified,long_format=1)">August 16, 2001 at 23:35:59</a>
+    <span tal:condition="not:view/show_history" tal:replace="python:view.toLocalizedTime(modified,long_format=1)">
+      August 16, 2001 at 23:35:59
+    </span>
+  </li>
+  <li tal:condition="view/isExpired">
+    <span class="state-expired"
+          i18n:translate="time_expired">expired</span>
+  </li>
+  <li  tal:define="contributors context/Contributors"
+       tal:condition="contributors"
+       i18n:translate="text_contributors">
+    Contributors:
+    <span i18n:name="name"
+          tal:omit-tag=""
+          tal:content="python: ', '.join(contributors)">
+      Mary
+    </span>
+  </li>
+  <li tal:define="rights context/Rights"
+              tal:condition="rights">
+    <div tal:replace="rights">Copyleft NiceCorp Inc.</div>
+  </li>
+</ul>
+</tal:name>
+</tal:creator>
+</div>

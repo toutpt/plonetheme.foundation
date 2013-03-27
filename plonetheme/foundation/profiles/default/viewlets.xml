@@ -18,6 +18,9 @@
   <hidden manager="plone.abovecontent" skinname="plonetheme.foundation">
     <viewlet name="plone.path_bar" />
   </hidden>
+  <hidden manager="plone.belowcontenttitle" skinname="plonetheme.foundation">
+    <viewlet name="plone.belowcontenttitle.documentbyline" />
+  </hidden>
   <hidden manager="plone.belowcontent" skinname="plonetheme.foundation">
     <viewlet name="plone.manage_portlets_fallback" />
   </hidden>

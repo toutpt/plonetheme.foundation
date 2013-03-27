@@ -78,7 +78,14 @@
       permission="zope.Public"
       />
 
-<!-- above contenttitle -->
+<!-- above content -->
+  <browser:viewlet
+      name="plonetheme.foundation.messages"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      template="messages.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope2.View"
+      />
   <browser:viewlet
       name="plonetheme.foundation.editbar"
       manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
@@ -88,9 +95,18 @@
       permission="cmf.ModifyPortalContent"
       />
   <browser:viewlet
-      name="plonetheme.foundation.messages"
-      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-      template="messages.pt"
+      name="plone.belowcontenttitle.documentbyline"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class="plone.app.layout.viewlets.content.DocumentBylineViewlet"
+      template="document_byline.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope2.View"
+      />
+  <browser:viewlet
+      name="plone.presentation"
+      for="Products.ATContentTypes.interface.IATDocument"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+      template="presentation.pt"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope2.View"
       />
