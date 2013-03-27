@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+
+<body>
+
+<metal:main fill-slot="content">
+    <tal:main-macro metal:define-macro="main"
+                    tal:define="memberinfo context/portal_membership/getMemberInfo;
+                                member context/@@plone_portal_state/member;
+                                name python:memberinfo['fullname'] or member.getId() or member.getId();
+                                portal_url context/portal_url">
+
+        <div id="content">
+
+            <h1 class="documentFirstHeading" i18n:translate="heading_dashboard">
+                <span tal:replace="name" i18n:name="user_name" />&#8217;s dashboard
+            </h1>
+
+            <div id="content-core">
+                <div id="dashboard">
+                    <div class="visualClear"><!-- --></div>
+                    <div id="dashboard-portlets1"
+                      tal:content="structure provider:plone.dashboard1" />
+                    <div id="dashboard-portlets2"
+                      tal:content="structure provider:plone.dashboard2" />
+                    <div id="dashboard-portlets3"
+                      tal:content="structure provider:plone.dashboard3" />
+                    <div id="dashboard-portlets4"
+                      tal:content="structure provider:plone.dashboard4" />
+                </div>
+                <div class="visualClear"><!-- --></div>
+            </div>
+        </div>
+
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

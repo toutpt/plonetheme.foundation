@@ -3,8 +3,9 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="plonetheme.foundation">
 
-  <include package="Products.CMFCore" file="permissions.zcml"/>
+  <include package="Products.CMFCore" file="permissions.zcml" />
   <include package="z3c.jbot" file="meta.zcml" />
+  <include package="plone.app.layout" />
 
   <interface
     interface=".layer.Layer"
@@ -45,6 +46,14 @@
       template="templates/ploneform-macros.pt"
       allowed_interface="zope.interface.common.mapping.IItemMapping"
       permission="zope.Public"
+      />
+
+  <browser:page
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="dashboard"
+      permission="plone.app.portlets.ViewDashboard"
+      class=".dashboard.FoundationDashboard"
+      layer=".layer.Layer"
       />
 
   <browser:resource

@@ -3,6 +3,8 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="plonetheme.foundation">
 
+<!-- VIEWLET MANAGER -->
+
   <browser:viewletManager
       name="plonetheme.foundation.topbar"
       provides=".topbar.ITopBarManager"
@@ -22,6 +24,24 @@
       class=".topbar.TopBarRightManager"
       />
 
+<!--  HEAD -->
+  <browser:viewlet
+      name="plonetheme.foundation.resources"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+      template="resources.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
+  <browser:viewlet
+      name="plonetheme.foundation.viewport"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+      template="viewport.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
+
+<!-- TOPBAR -->
+
   <browser:viewlet
       name="plonetheme.foundation.global_sections"
       manager=".topbar.ITopBarLeftManager"
@@ -29,14 +49,6 @@
       template="sections.pt"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope2.View"
-      />
-  <browser:viewlet
-      name="plonetheme.foundation.editbar"
-      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-      class=".topbar.EditBarViewlet"
-      template="editbar.pt"
-      layer="plonetheme.foundation.browser.layer.Layer"
-      permission="cmf.ModifyPortalContent"
       />
   <browser:viewlet
       name="plonetheme.foundation.searchbox"
@@ -55,6 +67,36 @@
       permission="zope2.View"
       />
 
+<!-- HEADER -->
+  <browser:viewlet
+      name="plonetheme.foundation.orbit"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      for=".orbit.IOrbitContainer"
+      class=".orbit.OrbitViewlet"
+      template="orbit.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope.Public"
+      />
+
+<!-- above contenttitle -->
+  <browser:viewlet
+      name="plonetheme.foundation.editbar"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      class=".topbar.EditBarViewlet"
+      template="editbar.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="cmf.ModifyPortalContent"
+      />
+  <browser:viewlet
+      name="plonetheme.foundation.messages"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      template="messages.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="zope2.View"
+      />
+
+
+<!--  footer  -->
   <browser:viewlet
       name="plone.footer"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
@@ -69,33 +111,10 @@
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope.Public"
       />
-  <browser:viewlet
-      name="plonetheme.foundation.orbit"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      for=".orbit.IOrbitContainer"
-      class=".orbit.OrbitViewlet"
-      template="orbit.pt"
-      layer="plonetheme.foundation.browser.layer.Layer"
-      permission="zope.Public"
-      />
-  <browser:viewlet
-      name="plonetheme.foundation.resources"
-      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-      template="resources.pt"
-      layer="plonetheme.foundation.browser.layer.Layer"
-      permission="zope.Public"
-      />
   <browser:page
       for="*"
       name="foundation_desktop_resources"
       class=".resources.Resources"
-      layer="plonetheme.foundation.browser.layer.Layer"
-      permission="zope.Public"
-      />
-  <browser:viewlet
-      name="plonetheme.foundation.viewport"
-      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-      template="viewport.pt"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope.Public"
       />

@@ -68,24 +68,10 @@
                     <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" />
 
                     <metal:block define-slot="content">
-                        <div metal:define-macro="content"
-                            tal:define="show_border context/@@plone/showEditableBorder; show_border python:show_border and not ajax_load"
-                            tal:attributes="class python:show_border and 'documentEditable' or ''">
-
-                            <div id="edit-bar"
-                                tal:condition="show_border"
-                                tal:content="structure provider:plone.contentviews" />
-
-                            <div metal:use-macro="context/global_statusmessage/macros/portal_message">
-                             Status message
-                            </div>
+                        <div metal:define-macro="content">
 
                             <metal:slot define-slot="body">
                                 <div id="content">
-
-                                    <metal:header define-slot="header" tal:content="nothing">
-                                    Visual Header
-                                    </metal:header>
 
                                     <metal:bodytext define-slot="main">
 
