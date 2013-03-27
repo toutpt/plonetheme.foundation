@@ -34,10 +34,9 @@ label {
     padding-left: 10px;
     display: inline;
 }
-
-#portal-header{
-    margin-top: 20px;
-    margin-bottom: 20px;
+#portal-columns{
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 -moz-focusring[contentEditable='true'],
 div[contenteditable] {
@@ -63,3 +62,8 @@ input::-webkit-inner-spin-button {
     display: inline-block;
 }
 /* /bug fix */
+
+/* button.small in the viewlet above content should not have margin */
+#viewlet-above-content-title .button.small{
+	margin-bottom: 0;
+}
