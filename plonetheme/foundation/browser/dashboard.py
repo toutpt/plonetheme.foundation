@@ -1,11 +1,20 @@
-from plone.app.layout.dashboard.dashboard import DashboardView
+from zope import interface
+from zope.i18n import translate
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.statusmessages.interfaces import IStatusMessage
+
 from Products.CMFPlone import PloneMessageFactory as _p
-from zope.i18n import translate
+from plone.app.layout.dashboard.dashboard import DashboardView
+from plone.app.portlets.browser import manage
+from plonetheme.foundation.browser import common
 
 
-class FoundationDashboard(DashboardView):
+class IFoundationDashboard(interface.Interface):
+    """marker interface"""
+
+
+class FoundationDashboard(common.DisableBorderView, DashboardView):
+    interface.implements(IFoundationDashboard)
 
     index = ViewPageTemplateFile('dashboard.pt')
 
@@ -14,11 +23,18 @@ class FoundationDashboard(DashboardView):
         return self.index()
 
     def update(self):
-        self.request.set('disable_border', 1)
-        self.request.set('disable_plone.leftcolumn', 1)
-        self.request.set('disable_plone.rightcolumn', 1)
+        super(FoundationDashboard, self).update()
         if self.empty() and self.can_edit():
             status = IStatusMessage(self.request)
             msg = _p(u"info_empty_dashboard")
             msg = translate(msg, domain='plone', context=self.request)
             status.add(msg, "info")
+
+
+class ManageDashboardPortlets(manage.ManageDashboardPortlets,
+                              common.DisableBorderView):
+    interface.implements(IFoundationDashboard)
+
+    def __call__(self):
+        self.update()
+        return self.index()

@@ -27,13 +27,13 @@
             <div id="content-core">
                 <div id="dashboard">
                     <div class="visualClear"><!-- --></div>
-                    <div id="dashboard-portlets1"
+                    <div id="dashboard-portlets1" class="small-12 large-3 columns"
                       tal:content="structure provider:plone.dashboard1" />
-                    <div id="dashboard-portlets2"
+                    <div id="dashboard-portlets2" class="small-12 large-3 columns"
                       tal:content="structure provider:plone.dashboard2" />
-                    <div id="dashboard-portlets3"
+                    <div id="dashboard-portlets3" class="small-12 large-3 columns"
                       tal:content="structure provider:plone.dashboard3" />
-                    <div id="dashboard-portlets4"
+                    <div id="dashboard-portlets4" class="small-12 large-3 columns"
                       tal:content="structure provider:plone.dashboard4" />
                 </div>
                 <div class="visualClear"><!-- --></div>

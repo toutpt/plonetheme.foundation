@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xml:lang="en" lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <div metal:fill-slot="javascript_head_slot" tal:omit-tag="">
+      <script type="text/javascript"
+          tal:attributes="src string:${context/absolute_url}/++resource++manage-portlets.js">
+      </script>
+    </div>
+</head>
+
+<body>
+
+<metal:main fill-slot="content">
+
+    <tal:main-macro metal:define-macro="main">
+
+            <div id="content">
+
+                <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
+                <h1 class="documentFirstHeading" i18n:translate="title_edit_dashboard">
+                    Edit your dashboard
+                </h1>
+                <div id="viewlet-above-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+
+                <div id="content-core">
+                    <div id="dashboard" class="row">
+                        <div id="dashboard-portlets1" class="small-12 large-3 columns"
+                          tal:content="structure provider:plone.dashboard1" />
+                        <div id="dashboard-portlets2" class="small-12 large-3 columns"
+                          tal:content="structure provider:plone.dashboard2" />
+                        <div id="dashboard-portlets3" class="small-12 large-3 columns"
+                          tal:content="structure provider:plone.dashboard3" />
+                        <div id="dashboard-portlets4" class="small-12 large-3 columns"
+                          tal:content="structure provider:plone.dashboard4" />
+                    </div>
+                    <div class="visualClear"><!-- --></div>
+                </div>
+
+            </div>
+    </tal:main-macro>
+
+</metal:main>
+
+</body>
+</html>

@@ -1,13 +1,15 @@
-<div class="button-bar" i18n:domain="plone">
+<div class="button-bar" i18n:domain="plone" tal:define="name view/__parent__/__name__">
     <ul class="button-group">
       <li>
-           <a href="" class="small button disabled"
-              tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/dashboard"
+           <a href="" class="small button"
+              tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/dashboard;
+                  class python:name == 'dashboard' and 'small button secondary' or 'small button'"
               i18n:translate="label_dashboard">Dashboard</a>
       </li>
       <li>
           <a href="" class="small button"
-             tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/@@manage-dashboard"
+             tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/@@manage-dashboard;
+                 class python:name == 'dashboard' and 'small button' or 'small button secondary'"
              i18n:translate="label_edit">Edit</a>
       </li>
   </ul>

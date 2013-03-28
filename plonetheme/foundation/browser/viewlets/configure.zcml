@@ -97,7 +97,7 @@
   <browser:viewlet
       name="plonetheme.foundation.editbar"
       manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-      view="plonetheme.foundation.browser.dashboard.FoundationDashboard"
+      view="plonetheme.foundation.browser.dashboard.IFoundationDashboard"
       template="dashboard_editbar.pt"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="plone.app.portlets.ManageOwnPortlets"

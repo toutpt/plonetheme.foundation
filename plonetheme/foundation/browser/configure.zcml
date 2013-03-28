@@ -38,6 +38,7 @@
       template="test_view.pt"
       permission="zope.Public"
     />
+
   <browser:page
       name="ploneform-macros"
       for="*"
@@ -55,6 +56,14 @@
       class=".dashboard.FoundationDashboard"
       layer=".layer.Layer"
       />
+
+  <browser:page
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="manage-dashboard"
+      class=".dashboard.ManageDashboardPortlets"
+      template="manage-dashboard.pt"
+      permission="plone.app.portlets.ManageOwnPortlets"
+    />
 
   <browser:resource
     name="plonetheme.foundation.js"
