@@ -35,6 +35,9 @@ label {
   margin-top: 10px;
   margin-bottom: 20px; }
 
+#content-core {
+  margin-bottom: 20px; }
+
 /* show content editable dashed */
 -moz-focusring[contentEditable='true'],
 div[contenteditable] {
