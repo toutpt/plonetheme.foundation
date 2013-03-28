@@ -24,10 +24,14 @@ Plone integration is done by plone.app.contenttypes.
 Mobile first
 ------------
 
-This theme is mobile first, it means all features are working on a mobile device
-and are enhanced for desktop.
+This theme is mobile first, it means all features are working on a mobile
+device and are enhanced for desktop.
 
 * http://en.wikipedia.org/wiki/Progressive_enhancement
+
+To achieve this there is a plonetheme.foundationdesk theme inside this one
+where resources are loaded by ajax and triggered by screen with (may change
+in the future)
 
 HTML 5
 ------
@@ -43,8 +47,30 @@ Read about compatibilities:
 * http://mobilehtml5.org/
 * http://www.wufoo.com/html5/
 
-TODO
-----
+Layout has also been improved by using more semantic HTML tags where it's
+possible.
 
-We depends on jqueryui because of autocomplete. It's the time to implements
-an ajax datalist widget in collective.z3cform.html5widgets
+TODO
+====
+
+RelatedItems support ?
+-----------------------
+
+The widget at the moment is for desktop and need jqueryui + contenttree
+as javascript depednencies.
+
+Options we have:
+* do not support related items for mobile and make a widget which is loaded by JS for desktop
+* support it using a simple "ajax search" widget without dependencies
+
+folder_contents
+---------------
+
+Table are not responsive friends. There are many way to display tables on
+mobile but I would prefere not have table at all.
+
+Ideas:
+* treat folder_contents as a mailbox and create a more NUI for this one.
+* use a responsive table approch (which one ?) with as few resources as possible
+
+

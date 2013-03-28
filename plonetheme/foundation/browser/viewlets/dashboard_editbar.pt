@@ -1,0 +1,14 @@
+<div class="button-bar" i18n:domain="plone">
+    <ul class="button-group">
+      <li>
+           <a href="" class="small button disabled"
+              tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/dashboard"
+              i18n:translate="label_dashboard">Dashboard</a>
+      </li>
+      <li>
+          <a href="" class="small button"
+             tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/@@manage-dashboard"
+             i18n:translate="label_edit">Edit</a>
+      </li>
+  </ul>
+</div>

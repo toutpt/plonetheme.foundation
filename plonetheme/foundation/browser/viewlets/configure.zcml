@@ -95,6 +95,14 @@
       permission="cmf.ModifyPortalContent"
       />
   <browser:viewlet
+      name="plonetheme.foundation.editbar"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      view="plonetheme.foundation.browser.dashboard.FoundationDashboard"
+      template="dashboard_editbar.pt"
+      layer="plonetheme.foundation.browser.layer.Layer"
+      permission="plone.app.portlets.ManageOwnPortlets"
+      />
+  <browser:viewlet
       name="plone.belowcontenttitle.documentbyline"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
       class="plone.app.layout.viewlets.content.DocumentBylineViewlet"

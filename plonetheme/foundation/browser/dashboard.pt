@@ -18,9 +18,11 @@
 
         <div id="content">
 
+            <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
             <h1 class="documentFirstHeading" i18n:translate="heading_dashboard">
                 <span tal:replace="name" i18n:name="user_name" />&#8217;s dashboard
             </h1>
+           <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
 
             <div id="content-core">
                 <div id="dashboard">
