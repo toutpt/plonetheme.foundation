@@ -12,4 +12,6 @@
      insert-after="custom"/>
  </skin-path>
 
+ <skin-path name="plonetheme.foundationdesk" based-on="plonetheme.foundation"></skin-path>
+
 </object>
