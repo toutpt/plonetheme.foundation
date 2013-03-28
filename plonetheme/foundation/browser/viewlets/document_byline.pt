@@ -19,17 +19,14 @@
   </li>
   <li tal:define="published view/pub_date" tal:condition="published">
     <span i18n:translate="box_published">published</span>
-    <span tal:replace="python:view.toLocalizedTime(published,long_format=1)">
-      August 16, 2001 at 23:35:59
-    </span>
+    <time pubdate="pubdate" tal:attributes="datetime published" tal:content="python:view.toLocalizedTime(published,long_format=1)">August 16, 2001 at 23:35:59</time>
   </li>
   <li tal:define="modified context/ModificationDate" tal:condition="modified">
-    <span i18n:translate="box_last_modified">
-      last modified
-    </span>
+    <span i18n:translate="box_last_modified">last modified</span>
     <a tal:condition="view/show_history"
-       tal:attributes="href string:${here/absolute_url}/@@historyview"
-       tal:content="python:view.toLocalizedTime(modified,long_format=1)">August 16, 2001 at 23:35:59</a>
+       tal:attributes="href string:${here/absolute_url}/@@historyview">
+         <time tal:attributes="datetime modified" tal:content="python:view.toLocalizedTime(modified,long_format=1)">August 16, 2001 at 23:35:59</time>
+    </a>
     <span tal:condition="not:view/show_history" tal:replace="python:view.toLocalizedTime(modified,long_format=1)">
       August 16, 2001 at 23:35:59
     </span>
