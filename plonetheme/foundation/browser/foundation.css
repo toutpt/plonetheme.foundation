@@ -69,3 +69,8 @@ input::-webkit-inner-spin-button {
 /* button.small in the viewlet above content should not have margin */
 #viewlet-above-content-title .button.small {
   margin-bottom: 0; }
+
+/* UX: the links are hard to click on, lets the link be 100% width */
+.f-dropdown a {
+  display: inline-block;
+  width: 100%; }

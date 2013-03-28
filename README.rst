@@ -50,8 +50,8 @@ Read about compatibilities:
 Layout has also been improved by using more semantic HTML tags where it's
 possible.
 
-This addon remove
------------------
+This addon remove ...
+---------------------
 
 This add remove archetypes, so any addons using archetypes will be broken.
 
@@ -91,5 +91,16 @@ mobile but I would prefere not have table at all.
 Ideas:
 * treat folder_contents as a mailbox and create a more NUI for this one.
 * use a responsive table approch (which one ?) with as few resources as possible
+
+Upstream some of changes done in this addon
+-------------------------------------------
+
+edit bar and status messages are hard coded in many templates:
+
+* main_template
+* dashboard
+* ...
+
+theses has been done using viewlet so changing the HTML of theses becomes really easy.
 
 
