@@ -73,6 +73,6 @@ parts
 develop-eggs
 var
 src
-var.old
+var.demo
 .sass-cache
 plonetheme/foundation/browser/.sass-cache/
