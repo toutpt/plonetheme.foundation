@@ -14,6 +14,7 @@
   <layer name="archetypes" remove="True"/>
   <layer name="archetypes_kss" remove="True"/>
   <layer name="ATContentTypes" remove="True"/>
+  <layer name="plone_content" remove="True"/>
   <layer name="plone_ecmascript" remove="True"/>
   <layer name="plone_styles" remove="True"/>
   <layer name="plone_images" remove="True"/>
@@ -21,6 +22,18 @@
   <layer name="cmf_legacy" remove="True"/>
  </skin-path>
 
- <skin-path name="plonetheme.foundationdesk" based-on="plonetheme.foundation"></skin-path>
+ <skin-path name="plonetheme.foundationdesk" based-on="plonetheme.foundation">
+  <layer name="referencebrowser" remove="True"/>
+  <layer name="tinymce" remove="True"/>
+  <layer name="archetypes" remove="True"/>
+  <layer name="archetypes_kss" remove="True"/>
+  <layer name="ATContentTypes" remove="True"/>
+  <layer name="plone_content" remove="True"/>
+  <layer name="plone_ecmascript" remove="True"/>
+  <layer name="plone_styles" remove="True"/>
+  <layer name="plone_images" remove="True"/>
+  <layer name="plone_3rdParty" remove="True"/>
+  <layer name="cmf_legacy" remove="True"/>
+ </skin-path>
 
 </object>
