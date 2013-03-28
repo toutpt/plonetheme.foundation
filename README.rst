@@ -50,6 +50,25 @@ Read about compatibilities:
 Layout has also been improved by using more semantic HTML tags where it's
 possible.
 
+This addon remove
+-----------------
+
+This add remove archetypes, so any addons using archetypes will be broken.
+
+removed skins from portal_skins:
+
+* referencebrowser
+* tinymce
+* archetypes
+* archetypes_kss
+* ATContentTypes
+* plone_ecmascript
+* plone_styles
+* plone_images
+* plone_3rdParty
+* cmf_legacy
+
+
 TODO
 ====
 
