@@ -13,8 +13,7 @@
                i18n:attributes="title;"
                class="small button dropdown"
                tal:content="menuItem/title"
-               i18n:translate="">
-                      Title</a>
+               i18n:translate="">Title</a>
         <ul class="f-dropdown" tal:attributes="id menuItem/extra/id" tal:define="submenu menuItem/submenu">
             <tal:block repeat="subMenuItem submenu">
                 <li>
@@ -22,22 +21,16 @@
                      tal:condition="subMenuItem/action"
                      tal:attributes="href subMenuItem/action;
                                      title subMenuItem/description;
-                                     id subMenuItem/extra/id | nothing;"
-                     i18n:attributes="title">
-                      <span tal:content="structure subMenuItem/title"
-                            i18n:translate=""
-                            class="subMenuTitle">
-                          Title
-                      </span>
-                  </a>
+                                     id subMenuItem/extra/id | nothing;
+                                     class subMenuItem/extra/class | nothing"
+                     i18n:attributes="title"
+                     i18n:translate=""
+                     tal:content="structure subMenuItem/title">Title</a>
                   <label tal:condition="not:subMenuItem/action"
-                       tal:attributes="id subMenuItem/extra/id | nothing;">
-                      <span tal:content="structure subMenuItem/title"
-                            i18n:translate=""
-                            class="subMenuTitle">
-                          Title
-                      </span>
-                  </label>
+                        tal:attributes="id subMenuItem/extra/id | nothing;"
+                        tal:content="structure subMenuItem/title"
+                        i18n:translate=""
+                        class="subMenuTitle">Title</label>
                 </li>
             </tal:block>
         </ul>

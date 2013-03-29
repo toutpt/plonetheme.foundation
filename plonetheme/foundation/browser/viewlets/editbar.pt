@@ -13,6 +13,7 @@
               <ul class="f-dropdown" id="editbarmenu">
 	            <tal:views repeat="action view_actions">
 	              <li tal:define="selected action/selected|nothing;"
+	                  tal:condition="not:selected"
 	                  tal:attributes="id string:contentview-${action/id};
 	                                  class python:selected and 'selected' or 'plain'">
 	                <a href=""
