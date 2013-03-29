@@ -72,6 +72,7 @@
       class=".dashboard.ManageDashboardPortlets"
       template="manage-dashboard.pt"
       permission="plone.app.portlets.ManageOwnPortlets"
+      layer=".layer.Layer"
     />
 
   <browser:resource
