@@ -103,4 +103,10 @@ edit bar and status messages are hard coded in many templates:
 
 theses has been done using viewlet so changing the HTML of theses becomes really easy.
 
+----
+
+Stop to wakup image to create an image tag and know your resources:
+
+* logo viewlet
+* prefs_install_products_form
 
