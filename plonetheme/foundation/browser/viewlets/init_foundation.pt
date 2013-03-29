@@ -1,5 +1,13 @@
 <div id="init-foundation-js">
 <script type="text/javascript">
 $(document).foundation();
+//https://github.com/zurb/foundation/issues/2050
+$(".button-group .dropdown").click(function() {
+    $(this).parent().siblings().each(function() {
+        if($(this).children("ul").is(".open")) {
+            $(this).children("ul").removeClass("open").css("left", "-99999px");
+        }
+    });
+});
 </script>
 </div>
