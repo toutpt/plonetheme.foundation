@@ -51,6 +51,15 @@
 
   <browser:page
       for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="author"
+      permission="zope2.View"
+      class=".author.Author"
+      template="author.pt"
+      layer=".layer.Layer"
+      />
+
+  <browser:page
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
       name="dashboard"
       permission="plone.app.portlets.ViewDashboard"
       class=".dashboard.FoundationDashboard"
