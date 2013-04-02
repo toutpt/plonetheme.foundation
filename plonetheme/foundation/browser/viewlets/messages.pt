@@ -1,7 +1,7 @@
 <tal:statusmsg
     tal:define="messages python:context.plone_utils.showPortalMessages()"
     tal:repeat="message messages">
-    <div  data-alert class="alert-box radius large-6 columns large-offset-6"
+    <div data-alert class="alert-box radius large-6 columns large-offset-6"
         tal:define="mtype message/type | nothing;
             mtype python:mtype == 'error' and 'alert' or '';"
         tal:attributes="class string:alert-box radius ${mtype};">
@@ -11,3 +11,8 @@
         </p>
     </div>
 </tal:statusmsg>
+<tal:sample tal:replace="nothing">
+    <div data-alert class="alert-box radius alert">
+            The status message.
+    </div>
+</tal:sample>

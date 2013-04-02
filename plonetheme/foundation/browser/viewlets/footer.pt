@@ -1,3 +1,4 @@
+<div class="row">
 <div class="large-4 columns" id="portal-footer">
     <p>
          <span i18n:translate="description_copyright" tal:omit-tag="">
@@ -57,3 +58,4 @@
                            accesskey accesskey;"
            >Site action</a></li>
 </ul>
+</div>
