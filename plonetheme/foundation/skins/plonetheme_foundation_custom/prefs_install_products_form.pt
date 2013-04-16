@@ -159,8 +159,6 @@
                             <li tal:define="upgrade_info python:QI.upgradeInfo(pid)"
                                 tal:condition="upgrade_info/required">
                               <span>
-                                <img alt="" src=""
-                                     tal:replace="structure context/error_icon.png" />
                                 <span i18n:translate="">
                                   This add-on has been upgraded.
                                 </span>
