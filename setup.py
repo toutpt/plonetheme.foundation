@@ -34,6 +34,7 @@ setup(name='plonetheme.foundation',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.contenttypes',
           'plone.app.modernizr',
           'plone.app.theming',
           'plone.app.themingplugins',
