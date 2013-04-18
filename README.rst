@@ -1,8 +1,8 @@
 Introduction
 ============
 
-This addon is a base theme for the CMS Plone. It provides a different design
-and code base for the UI.
+This addon is a base theme for the CMS Plone.
+It provides a different design and code base for the User Interface.
 
 Features
 ========
@@ -110,3 +110,20 @@ Stop to wakup image to create an image tag and know your resources:
 * logo viewlet
 * prefs_install_products_form
 
+Credits
+=======
+
+Companies
+---------
+
+|makinacom|_
+
+`Makina Corpus <http://www.makina-corpus.com>`_
+
+People
+------
+
+* JeanMichel FRANCOIS [toutpt]
+
+.. |makinacom| image:: http://depot.makina-corpus.org/public/logo.gif
+.. _makinacom:  http://www.makina-corpus.com
