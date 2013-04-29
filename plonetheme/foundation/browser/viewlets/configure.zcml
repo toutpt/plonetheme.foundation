@@ -62,7 +62,7 @@
       name="plonetheme.foundation.personalbar"
       manager=".topbar.ITopBarRightManager"
       class="plone.app.layout.viewlets.common.PersonalBarViewlet"
-       template="personalbar.pt"
+      template="personalbar.pt"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope2.View"
       />
