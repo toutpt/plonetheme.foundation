@@ -6,6 +6,7 @@
   <include package="Products.CMFCore" file="permissions.zcml" />
   <include package="z3c.jbot" file="meta.zcml" />
   <include package="plone.app.layout" />
+  <include package="plone.app.controlpanel" />
 
   <interface
     interface=".layer.Layer"
@@ -74,6 +75,14 @@
       permission="plone.app.portlets.ManageOwnPortlets"
       layer=".layer.Layer"
     />
+  <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="overview-controlpanel"
+      class=".overview_controlpanel.OverviewControlPanel"
+      template="overview-controlpanel.pt"
+      permission="plone.app.controlpanel.Overview"
+      layer=".layer.Layer"
+      />
 
   <browser:resource
     name="plonetheme.foundation.js"
