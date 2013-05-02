@@ -17,9 +17,9 @@
   <layer name="plone_content" remove="True"/>
   <layer name="plone_ecmascript" remove="True"/>
   <layer name="plone_styles" remove="True"/>
-  <layer name="plone_images" remove="True"/>
   <layer name="plone_3rdParty" remove="True"/>
   <layer name="cmf_legacy" remove="True"/>
+  <layer name="plone_images"/>
  </skin-path>
 
  <skin-path name="plonetheme.foundationdesk" based-on="plonetheme.foundation">
@@ -31,9 +31,9 @@
   <layer name="plone_content" remove="True"/>
   <layer name="plone_ecmascript" remove="True"/>
   <layer name="plone_styles" remove="True"/>
-  <layer name="plone_images" remove="True"/>
   <layer name="plone_3rdParty" remove="True"/>
   <layer name="cmf_legacy" remove="True"/>
+  <layer name="plone_images"/>
  </skin-path>
 
 </object>
