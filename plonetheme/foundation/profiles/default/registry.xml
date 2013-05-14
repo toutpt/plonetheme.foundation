@@ -1,6 +1,6 @@
 <registry>
   <record name="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings.resourceBundlesForThemes">
-    <value>
+    <value purge="False">
       <element key="plonetheme.foundation">
         <element>polyfill</element>
         <element>jquery</element>
@@ -12,7 +12,7 @@
       </element>
 
       <element key="Sunburst Theme">
-        <element>default</element>
+        <element>(default)</element>
         <element>polyfill</element>
         <element>jquery</element>
         <element>tinymce</element>
