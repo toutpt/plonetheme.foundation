@@ -16,16 +16,33 @@ class Resources(BrowserView):
     def __call__(self):
         jstool = getToolByName(self.context, "portal_javascripts")
         csstool = getToolByName(self.context, "portal_css")
+        portal_skins = getToolByName(self.context, "portal_skins")
         portal_url = getToolByName(self.context, 'portal_url')()
-        js = jstool.getCookedResources(theme="plonetheme.foundationdesk")
+
+        themename = portal_skins.getDefaultSkin()
+        theme = themename + "desk"
+        themes = portal_skins.getSkinSelections()
+        if theme not in themes:
+            theme = "plonetheme.foundationdesk"
+
+        js = jstool.getCookedResources(theme=theme)
         js_info = []
         for script in js:
-            js_info.append(portal_url + '/' + script.getId())
-
-        css = csstool.getCookedResources(theme="plonetheme.foundationdesk")
+            url = '%s/portal_javascripts/%s/%s' % (
+                portal_url,
+                theme,
+                script.getId(),
+            )
+            js_info.append(url)
+        css = csstool.getCookedResources(theme=theme)
         css_info = []
         for sheet in css:
-            css_info.append(portal_url + '/' + sheet.getId())
+            url = '%s/portal_css/%s/%s' % (
+                portal_url,
+                theme,
+                script.getId(),
+            )
+            css_info.append(url)
 
         resources = {"js": js_info, "css": css_info}
         json_resources = json.dumps(resources)
