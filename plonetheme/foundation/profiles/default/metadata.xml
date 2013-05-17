@@ -4,7 +4,6 @@
   <dependencies>
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-plone.app.modernizr:default</dependency>
-    <dependency>profile-plone.app.contenttypes:default</dependency>
     <dependency>profile-collective.z3cform.html5widgets:default</dependency>
     <dependency>profile-collective.js.ckeditor:default</dependency>
     <dependency>profile-collective.js.enquire:default</dependency>
