@@ -1,5 +1,6 @@
-<div class="row">
-<div class="large-4 columns" id="portal-footer">
+<hr>
+<footer class="row">
+        <div class="large-12 columns" id="portal-footer">
     <p>
          <span i18n:translate="description_copyright" tal:omit-tag="">
          The
@@ -21,11 +22,12 @@
                    <a href="http://creativecommons.org/licenses/GPL/2.0/" i18n:translate="label_gnu_gpl_licence">GNU GPL license</a></span>.
          </span>
     </p>
-</div>
-
-
-<div class="large-4 columns" id="portal-colophon">
-<ul>
+        </div>
+        <div class="large-12 columns">
+          <ul class="inline-list right" id="portal-siteactions"
+              tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
+              tal:condition="view/site_actions"
+              i18n:domain="plone">
   <li>
     <a href="http://plone.org"
        title="This site was built using the Plone Open Source CMS/WCM."
@@ -33,16 +35,6 @@
        i18n:translate="label_powered_by_plone">
       Powered by Plone &amp; Python</a>
   </li>
-</ul>
-</div>
-
-
-
-<ul id="portal-siteactions" class="large-4 columns"
-    tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
-    tal:condition="view/site_actions"
-    i18n:domain="plone">
-
     <li tal:repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}"><a
            href=""
@@ -57,5 +49,6 @@
                            title title;
                            accesskey accesskey;"
            >Site action</a></li>
-</ul>
-</div>
+          </ul>
+        </div>
+</footer>
