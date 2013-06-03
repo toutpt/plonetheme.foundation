@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+
+ <javascript id="jquery.tinymce.js" bundle="default"/>
+ <javascript id="tiny_mce_gzip.js" bundle="default"/>
+ <javascript id="++resource++plone.app.modernizr.custom.js" bundle="default"/>
+ <javascript id="++resource++collective.js.enquire.min.js" bundle="default"/>
+
+ <javascript id="++resource++plone.formwidget.querystring.querywidget.js" bundle="default"/>
+ <javascript id="++resource++plone.formwidget.autocomplete.js" bundle="default"/>
+ <javascript id="++resource++plone.formwidget.contenttree/contenttree.js" bundle="default"/>
+
+</object>

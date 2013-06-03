@@ -1,0 +1,7 @@
+<registry>
+  <record name="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings.resourceBundlesForThemes">
+    <value purge="False">
+      <element key="Sunburst Theme" remove="True"/>
+    </value>
+  </record>
+</registry>

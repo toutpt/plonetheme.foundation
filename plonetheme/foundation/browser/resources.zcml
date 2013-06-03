@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="plonetheme.foundation">
+
+  <browser:resourceDirectory
+    name="plone.formwidget.contenttree"
+    directory="empty" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.app.jquerytools.js"
+    file="empty/empty.js" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.app.jquerytools.dateinput.js"
+    file="empty/empty.js" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.app.jquerytools.overlayhelpers.js"
+    file="empty/empty.js" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.app.jquerytools.form.js"
+    file="empty/empty.js" layer=".layer.Layer" />
+  <browser:resource
+    name="search.js"
+    file="empty/empty.js" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.formwidget.querystring.querywidget.js"
+    file="empty/empty.js" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.formwidget.autocomplete.js"
+    file="empty/empty.js" layer=".layer.Layer" />
+
+  <browser:resourceDirectory
+    name="++resource++tinymce.stylesheets"
+    directory="empty" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.app.jquerytools.dateinput.css"
+    file="empty/empty.css" layer=".layer.Layer" />
+  <browser:resource
+    name="plone.formwidget.querystring.querywidget.css"
+    file="empty/empty.css" layer=".layer.Layer" />
+
+</configure>

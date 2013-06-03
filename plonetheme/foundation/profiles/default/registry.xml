@@ -2,20 +2,13 @@
   <record name="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings.resourceBundlesForThemes">
     <value purge="False">
       <element key="plonetheme.foundation">
-        <element>polyfill</element>
+        <element>default</element>
         <element>jquery</element>
         <element>foundation</element>
       </element>
       <element key="plonetheme.foundationdesk">
         <element>ckeditor</element>
         <element>jqueryui</element>
-      </element>
-
-      <element key="Sunburst Theme">
-        <element>(default)</element>
-        <element>polyfill</element>
-        <element>jquery</element>
-        <element>tinymce</element>
       </element>
     </value>
   </record>

@@ -7,6 +7,4 @@
     cacheable="True" compression="none" cookable="True"
     enabled="1" expression="" />
 
- <stylesheet id="++resource++tinymce.stylesheets/tinymce.css" bundle="tinymce" />
-
 </object>

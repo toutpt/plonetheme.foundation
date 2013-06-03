@@ -7,6 +7,7 @@
   <include package="z3c.jbot" file="meta.zcml" />
   <include package="plone.app.layout" />
   <include package="plone.app.controlpanel" />
+  <include file="resources.zcml" />
 
   <interface
     interface=".layer.Layer"

@@ -4,11 +4,17 @@
 
     <upgradeStep
         source="*"
-        destination="1023"
+        destination="1024"
         title="Upgrade"
         description=""
         profile="plonetheme.foundation:default"
         handler=".upgrades.common"
         />
-
+  <registerProfile
+      name="zclean"
+      title="plonetheme.foundation"
+      directory="profiles/zclean"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 </configure>
