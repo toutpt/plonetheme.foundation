@@ -124,9 +124,19 @@
   <browser:viewlet
       name="plone.footer"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      class=".footer.FooterViewlet"
+      class="plone.app.layout.viewlets.common.FooterViewlet"
+      template="footer.pt"
       layer="plonetheme.foundation.browser.layer.Layer"
       permission="zope.Public"
+      />
+  <!-- Colophon -->
+  <browser:viewlet
+      name="plone.colophon"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      template="colophon.pt"
+      permission="zope.Public"
+      layer="plonetheme.foundation.browser.layer.Layer"
       />
   <browser:viewlet
       name="plonetheme.foundation.init"

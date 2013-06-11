@@ -1,0 +1,27 @@
+<div id="portal-colophon" class="large-6 columns"
+     i18n:domain="plonetheme.foundation">
+<div class="colophonWrapper">
+<ul>
+  <li><a href="http://python.org"
+         title="The Python programming language."
+         i18n:attributes="title title_built_with_python;"
+         i18n:translate="label_powered_by_python">Python</a></li>
+  <li><a href="http://zope.org"
+         title="The Zope Framework & Application server."
+         i18n:attributes="title title_built_with_zope;"
+         i18n:translate="label_powered_by_zope">Zope</a></li>
+  <li><a href="http://plone.org"
+         title="The Plone CMS/WCM."
+         i18n:attributes="title title_built_with_plone;"
+         i18n:translate="label_powered_by_plone">Plone</a></li>
+  <li><a href="http://jquery.com"
+         title="The jQuery JavaScript library."
+         i18n:attributes="title title_built_with_jquery;"
+         i18n:translate="label_powered_by_jquery">jQuery</a></li>
+  <li><a href="http://foundation.zurb.com/"
+         title="Foundation front-end framework."
+         i18n:attributes="title title_built_with_foundation;"
+         i18n:translate="label_powered_by_foundation">Foundation</a></li>
+</ul>
+</div>
+</div>

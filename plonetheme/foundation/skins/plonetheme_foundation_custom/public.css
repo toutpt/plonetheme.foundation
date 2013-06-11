@@ -2,3 +2,7 @@
  * original version: Plone = 4.3
        plonetheme.sunburst = 1.4.1
  */
+#portal-footer{
+    border-top: 1px dotted grey;
+    padding-top: 1em;
+}
