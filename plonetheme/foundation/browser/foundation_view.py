@@ -2,8 +2,7 @@ from zope import component
 from zope import interface
 
 from Products.Five import BrowserView
-from plone.app.layout.navigation.navtree import buildFolderTree
-from Products.CMFPlone.browser.navtree import NavtreeQueryBuilder
+
 
 class IFoundationView(interface.Interface):
     """foundation api"""

@@ -1,7 +1,6 @@
 from Acquisition import aq_inner, aq_parent
 from zope import interface
 from zope import schema
-from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
 from plone.app.layout.navigation.interfaces import INavigationRoot
 from collective.picturefill.interfaces import IPictureFill

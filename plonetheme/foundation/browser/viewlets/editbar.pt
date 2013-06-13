@@ -1,8 +1,7 @@
 <tal:editbar
     tal:define="ploneview context/@@plone;
         checkPermission nocall: context/portal_membership/checkPermission;
-        view_actions view/prepareObjectTabs;
-        content_actions view/object_actions;"
+        view_actions view/prepareObjectTabs;"
     tal:condition="ploneview/showEditableBorder">
     <div class="button-bar" i18n:domain="plone">
         <ul class="button-group">

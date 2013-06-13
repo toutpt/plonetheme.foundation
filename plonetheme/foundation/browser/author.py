@@ -1,7 +1,5 @@
 from zope import interface
 from plonetheme.foundation.browser import common
-from Products.PythonScripts.standard import url_unquote_plus
-from zExceptions import NotFound
 from zope.publisher.interfaces import IPublishTraverse
 
 
