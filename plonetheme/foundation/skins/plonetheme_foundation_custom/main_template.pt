@@ -68,7 +68,8 @@
                     <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" />
 
                     <metal:block define-slot="content">
-                        <div metal:define-macro="content">
+                        <div metal:define-macro="content" tal:define="show_border context/@@plone/showEditableBorder;
+                                show_border python:show_border and not ajax_load;">
 
                             <metal:slot define-slot="body">
                                 <div id="content">
