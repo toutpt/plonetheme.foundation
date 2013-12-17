@@ -7,6 +7,5 @@
     <dependency>profile-collective.z3cform.html5widgets:default</dependency>
     <dependency>profile-collective.js.ckeditor:default</dependency>
     <dependency>profile-collective.js.enquire:default</dependency>
-    <dependency>profile-collective.js.foundation:default</dependency>
   </dependencies>
 </metadata>
