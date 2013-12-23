@@ -1,4 +1,4 @@
-<div class="fixed" i18n:domain="plone">
+<div class="contain-to-grid fixed" i18n:domain="plone">
     <nav class="top-bar">
       <ul class="title-area">
           <li class="name">
